@@ -70,6 +70,7 @@ typedef struct tls_struct {
   int first_retry;
   TIMER_T start, stop;
   long tid;
+  int isMaster;
 } tls_t;
 
 /*#define USE_MUTEX*/
@@ -339,6 +340,8 @@ tm_thread_enter_ibm()
   memset(tls, 0, sizeof(tls_t));
 
   tls->tid = thread_getId();
+  tls->isMaster = !prefetching || tls->tid % 2 == 0;
+
   TIMER_READ(tls->start);
   THREAD_KEY_SET(global_tls_key, tls);
 #endif /* ! __bgq__ */
@@ -539,7 +542,7 @@ int tbegin_ibm(int region_id)
     else {
         if(prefetching){
 //printf("assd\n");
-/*          if(tls->tid%2 == 1){
+/*          if(!tls->isMaster){
             if(completed_txs[tls->tid] <= completed_txs[tls->tid - 1]){
               tabort_ibm();
             }
@@ -629,7 +632,7 @@ int tbegin_ibm(int region_id)
       TIMER_READ(tls->stop);
 
       if (tls->first_retry) {
-        if(prefetching && tls->tid%2 == 1){
+        if(prefetching && tls->isMaster){
           tls->prefetch_time += TIMER_DIFF_MICROSEC(tls->start, tls->stop);
           completed_txs[tls->tid] = 0;
           return CONTINUE;
@@ -707,7 +710,7 @@ tend_ibm()
 #ifdef HTM_CONSERVE_RWBUF
   resume_tx();
 #endif
-  if (gl.a.global_lock) {
+  if (gl.a.global_lock) { printf("thread %d on gl\n", tls->tid);
 #ifdef USE_MUTEX
     THREAD_MUTEX_LOCK(global_lock_mutex);
     gl.a.global_lock = 0;
@@ -725,7 +728,7 @@ tend_ibm()
   } else {
 
     if(prefetching){
-      if(tls->tid%2 == 1){
+      if(!tls->isMaster){
         tabort_ibm();
       }
 //      completed_txs[tls->tid] = 0;
