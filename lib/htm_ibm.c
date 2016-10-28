@@ -1,4 +1,6 @@
 /* Copyright (c) IBM Corp. 2014. */
+#define _GNU_SOURCE
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -15,6 +17,8 @@
 #ifdef __bgq__
 #include <speculation.h>
 #endif
+
+#include <pthread.h>
 
 #define NUM_HTM_STATS_EVENTS 14
 #define NUM_HTM_ABORT_REASON_CODES 19
@@ -83,6 +87,12 @@ static union {
     char another_cache_line[252];
   } a;
 } gl;
+
+static struct {
+  int completed_txs;
+  char another_cache_line[252];
+} ctxs[256];
+
 #ifdef USE_MUTEX
 static THREAD_MUTEX_T global_lock_mutex;
 static THREAD_COND_T global_lock_cond;
@@ -100,7 +110,6 @@ static int prefetching = 0;
 static unsigned long long global_prefetch_time = 0;
 static unsigned long long global_normal_time = 0;
 static unsigned long long global_abort_time = 0;
-static long completed_txs[256];
 
 /*#define ABORTED_INSN_ADDRESS_STATS*/
 #ifdef ABORTED_INSN_ADDRESS_STATS
@@ -185,7 +194,8 @@ tm_startup_ibm()
     THREAD_MUTEX_INIT(global_htm_stats_lock);
   }
 #endif
-  memset(&completed_txs, 0, sizeof(completed_txs));
+
+  memset(&ctxs, 0, sizeof(ctxs));
 }
 
 static void
@@ -340,7 +350,18 @@ tm_thread_enter_ibm()
   memset(tls, 0, sizeof(tls_t));
 
   tls->tid = thread_getId();
-  tls->isMaster = !prefetching || tls->tid % 2 == 0;
+  tls->isMaster = (!prefetching || tls->tid % 2 == 0);
+
+  cpu_set_t cpuset;
+  CPU_ZERO(&cpuset);
+  for(int i = 0; i < 8; i++){
+    if(prefetching)
+    	CPU_SET( tls->tid/2*8+i, &cpuset);
+    else
+        CPU_SET( tls->tid*8+i, &cpuset);
+  }
+
+//  pthread_setaffinity_np(pthread_self(), sizeof(cpu_set_t), &cpuset);
 
   TIMER_READ(tls->start);
   THREAD_KEY_SET(global_tls_key, tls);
@@ -376,7 +397,7 @@ tm_thread_exit_ibm()
 #include "htm_ia32_stat.h"
 #undef HTM_IA32_STAT
 #elif defined(__PPC__) || defined(_ARCH_PPC)
-#define HTM_PPC_STAT(nam) global_htm_stats_per_region[region].abort_reason_counters.nam += tls->htm_stats[region].abort_reason_counters.nam; if(region < 3) printf("thread %d %s %d\n", thread_getId(), #nam,tls->htm_stats[region].abort_reason_counters.nam);
+#define HTM_PPC_STAT(nam) global_htm_stats_per_region[region].abort_reason_counters.nam += tls->htm_stats[region].abort_reason_counters.nam; if(region < 3) printf("thread %lu: %15llu %s\n", thread_getId(),tls->htm_stats[region].abort_reason_counters.nam, #nam);
 #include "htm_ppc_stat.h"
 #undef HTM_PPC_STAT
 #endif
@@ -540,13 +561,10 @@ int tbegin_ibm(int region_id)
     }
 #endif
     else {
-        if(prefetching){
-//printf("assd\n");
-/*          if(!tls->isMaster){
-            if(completed_txs[tls->tid] <= completed_txs[tls->tid - 1]){
+        if(prefetching && !tls->isMaster){
+            if(ctxs[tls->tid].completed_txs <= ctxs[tls->tid - 1].completed_txs){
               tabort_ibm();
             }
-          }*/
         }
     }
   }
@@ -632,18 +650,17 @@ int tbegin_ibm(int region_id)
       TIMER_READ(tls->stop);
 
       if (tls->first_retry) {
-        if(prefetching && tls->isMaster){
+        if(prefetching && !tls->isMaster){
           tls->prefetch_time += TIMER_DIFF_MICROSEC(tls->start, tls->stop);
-          completed_txs[tls->tid] = 0;
+          ctxs[tls->tid].completed_txs++;
           return CONTINUE;
-        } else {
-          tls->abort_time += TIMER_DIFF_MICROSEC(tls->start, tls->stop);
         }
+
         tls->first_retry = 0;
         INCREMENT_STAT(first_abort);
-      } else {
-        tls->abort_time += TIMER_DIFF_MICROSEC(tls->start, tls->stop);
       }
+
+      tls->abort_time += TIMER_DIFF_MICROSEC(tls->start, tls->stop);
 //printf("abort: %lu\n", tls->start.tv_usec);
 
 #ifdef ABORTED_INSN_ADDRESS_STATS
@@ -710,7 +727,7 @@ tend_ibm()
 #ifdef HTM_CONSERVE_RWBUF
   resume_tx();
 #endif
-  if (gl.a.global_lock) { printf("thread %d on gl\n", tls->tid);
+  if (gl.a.global_lock) { //printf("thread %d on gl\n", tls->tid);
 #ifdef USE_MUTEX
     THREAD_MUTEX_LOCK(global_lock_mutex);
     gl.a.global_lock = 0;
@@ -731,12 +748,13 @@ tend_ibm()
       if(!tls->isMaster){
         tabort_ibm();
       }
-//      completed_txs[tls->tid] = 0;
+//      ctxs[tls->tid].completed_txs++;
     }
 
     tend();
   }
-//completed_txs[tls->tid]++;
+
+  ctxs[tls->tid].completed_txs++;
 
 
   TIMER_READ(tls->stop);
