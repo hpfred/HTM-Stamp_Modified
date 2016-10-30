@@ -547,7 +547,10 @@ int tbegin_ibm(int region_id)
   INCREMENT_STAT(tx);
   TIMER_READ(tls->start);
 
-  tbegin_result = tbegin(&diag);
+  if(tls->isMaster)
+    tbegin_result = tbegin(0, &diag);
+  else
+    tbegin_result = tbegin(1, &diag);
 
   if (tbegin_result == 0) {
     /* Transaction */
@@ -643,6 +646,7 @@ int tbegin_ibm(int region_id)
 	  TLSCTR.Implementation_Specific           += (reason&PPC_BFIELD(15))?1:0;
 	  TLSCTR.Instruction_Fetch_Conflict        += (reason&PPC_BFIELD(16))?1:0;
           TLSCTR.Explicit_Abort                    += (reason&PPC_BFIELD(31))?1:0;
+          TLSCTR.Rollback_Only                     += (reason&PPC_BFIELD(38))?1:0;
 	}
 #endif
       }

@@ -42,7 +42,9 @@ typedef struct {
 } TransactionDiagnosticInfo;
 
 /*
-  int tbegin(TransactionDiagnosticInfo *diag);
+  int tbegin(int rot, TransactionDiagnosticInfo *diag);
+  Input 0 for normal transactions
+        1 for Rollback-Only Transactions
   Returns 0 for success
           1 for inderminate
           2 for transient abort
@@ -51,7 +53,7 @@ typedef struct {
 
 #if defined(__370__)
 
-int tbegin(TransactionDiagnosticInfo *diag);
+int tbegin(int rot, TransactionDiagnosticInfo *diag);
 #if __COMPILER_VER__ >= 0x410d0000
 #define tend() __TM_end()
 #else
@@ -85,7 +87,7 @@ void restore_preserved_fpr(uint64_t *addr);
 #define XABORT_DEBUG	0x10
 #define XABORT_NESTED	0x20
 
-static inline int tbegin(TransactionDiagnosticInfo *diag)
+static inline int tbegin(int rot, TransactionDiagnosticInfo *diag)
 {
   int xbegin_result;
 
@@ -118,13 +120,20 @@ static inline int tbegin(TransactionDiagnosticInfo *diag)
 
 #elif defined(__PPC__) || defined(_ARCH_PPC)
 
-static inline int tbegin(TransactionDiagnosticInfo *diag)
+static inline int tbegin(int rot, TransactionDiagnosticInfo *diag)
 {
   uint32_t tbegin_status;
 
-  asm volatile(".long 0x7c00051d;"
-	       "mfcr %0"
-	       :"=r"(tbegin_status): : "cr0");	// tbegin. 0
+  if(rot){
+    asm volatile(".long 0x7c20051d;"
+                 "mfcr %0"
+                 :"=r"(tbegin_status): : "cr0");        // tbegin. 1
+  } else {
+    asm volatile(".long 0x7c00051d;"
+                 "mfcr %0"
+                 :"=r"(tbegin_status): : "cr0");	// tbegin. 0
+  }
+
   if (! (tbegin_status & 0x20000000U))
     return 0;
   else {
