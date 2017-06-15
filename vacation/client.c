@@ -254,7 +254,7 @@ client_run (void* argPtr)
                     MANAGER_RESERVE_ROOM(managerPtr,
                                          customerId, maxIds[RESERVATION_ROOM]);
                 }
-                TM_END();
+                TM_END_ID(0);
                 break;
             }
 
@@ -265,7 +265,7 @@ client_run (void* argPtr)
                 if (bill >= 0) {
                     MANAGER_DELETE_CUSTOMER(managerPtr, customerId);
                 }
-                TM_END();
+                TM_END_ID(1);
                 break;
             }
 
@@ -316,7 +316,7 @@ client_run (void* argPtr)
                         }
                     }
                 }
-                TM_END();
+                TM_END_ID(2);
                 break;
             }
 

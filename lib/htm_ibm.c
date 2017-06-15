@@ -19,6 +19,7 @@
 #endif
 
 #include <pthread.h>
+#include <sys/platform/ppc.h>
 
 #define NUM_HTM_STATS_EVENTS 14
 #define NUM_HTM_ABORT_REASON_CODES 19
@@ -90,7 +91,7 @@ static union {
 
 static struct {
   int completed_txs;
-  char another_cache_line[252];
+  char one_cache_line[252];
 } ctxs[256];
 
 #ifdef USE_MUTEX
@@ -354,14 +355,18 @@ tm_thread_enter_ibm()
 
   cpu_set_t cpuset;
   CPU_ZERO(&cpuset);
-  for(int i = 0; i < 8; i++){
-    if(prefetching)
-    	CPU_SET( tls->tid/2*8+i, &cpuset);
-    else
-        CPU_SET( tls->tid*8+i, &cpuset);
-  }
+  //for(int i = 0; i < 8; i++){
+    if(prefetching){
+        CPU_SET( tls->tid/2*8+tls->tid%2, &cpuset);
+    //	CPU_SET( tls->tid/2*8+i, &cpuset);
+    }else
+        CPU_SET( tls->tid*8, &cpuset);
+  //}
 
-//  pthread_setaffinity_np(pthread_self(), sizeof(cpu_set_t), &cpuset);
+  pthread_setaffinity_np(pthread_self(), sizeof(cpu_set_t), &cpuset);
+
+  if(!tls->isMaster)
+    __ppc_set_ppr_low();
 
   TIMER_READ(tls->start);
   THREAD_KEY_SET(global_tls_key, tls);
@@ -376,6 +381,16 @@ tm_thread_exit_ibm()
     tls_t *tls;
     int i;
     int region;
+#if defined(__PPC__) || defined(_ARCH_PPC)
+#define HTM_PPC_STAT(NAM) long long unsigned int NAM;
+    struct {
+#include "htm_ppc_stat.h"
+    } thread_abort_reason_counters;
+    int aborts = 0;
+
+    memset(&thread_abort_reason_counters, 0, sizeof(thread_abort_reason_counters));
+#undef HTM_PPC_STAT
+#endif
 
     tls = THREAD_KEY_GET(global_tls_key);
 
@@ -383,8 +398,9 @@ tm_thread_exit_ibm()
     for (region = 0; region < NUM_ATOMIC_REGIONS; region++) {
       for (i = 0; i < NUM_HTM_STATS_EVENTS; i++) {
 	global_htm_stats_per_region[region].event_counter[i] += tls->htm_stats[region].event_counter[i];
-        if(i == 2 && tls->htm_stats[region].event_counter[2] > 0) printf("thread id: %d aborts on region %d: %d\n", thread_getId(), region, tls->htm_stats[region].event_counter[2]);
       }
+      aborts += tls->htm_stats[region].event_counter[2];
+
 #if defined(__370__)
       for (i = 0; i < NUM_HTM_ABORT_REASON_CODES; i++) {
 	int j;
@@ -397,11 +413,19 @@ tm_thread_exit_ibm()
 #include "htm_ia32_stat.h"
 #undef HTM_IA32_STAT
 #elif defined(__PPC__) || defined(_ARCH_PPC)
-#define HTM_PPC_STAT(nam) global_htm_stats_per_region[region].abort_reason_counters.nam += tls->htm_stats[region].abort_reason_counters.nam; if(region < 3) printf("thread %lu: %15llu %s\n", thread_getId(),tls->htm_stats[region].abort_reason_counters.nam, #nam);
+#define HTM_PPC_STAT(nam) global_htm_stats_per_region[region].abort_reason_counters.nam += tls->htm_stats[region].abort_reason_counters.nam; thread_abort_reason_counters.nam += tls->htm_stats[region].abort_reason_counters.nam;
 #include "htm_ppc_stat.h"
 #undef HTM_PPC_STAT
 #endif
     }
+
+    printf("thread id: %lu , %d aborts\n", thread_getId(), aborts);
+#if defined(__PPC__) || defined(_ARCH_PPC)
+#define HTM_PPC_STAT(nam) printf("thread %lu: %15llu %s\n", thread_getId(), thread_abort_reason_counters.nam, #nam);
+#include "htm_ppc_stat.h"
+#undef HTM_PPC_STAT
+#endif
+
     global_prefetch_time += tls->prefetch_time;
     global_normal_time += tls->normal_time;
     global_abort_time += tls->abort_time;
@@ -565,9 +589,11 @@ int tbegin_ibm(int region_id)
 #endif
     else {
         if(prefetching && !tls->isMaster){
-            if(ctxs[tls->tid].completed_txs <= ctxs[tls->tid - 1].completed_txs){
+            if(ctxs[tls->tid].completed_txs - ctxs[tls->tid - 1].completed_txs < 5){
               tabort_ibm();
             }
+//		while(1)
+//            ctxs[tls->tid-1].completed_txs = 0;
         }
     }
   }

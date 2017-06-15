@@ -813,7 +813,7 @@ genScalData (void* argPtr)
             long t2 = (long)TM_SHARED_READ(permV[t]);
             TM_SHARED_WRITE(permV[t], TM_SHARED_READ(permV[i]));
             TM_SHARED_WRITE(permV[i], t2);
-            TM_END();
+            TM_END_ID(0);
         }
     }
 
@@ -1100,7 +1100,7 @@ genScalData (void* argPtr)
     TM_BEGIN_ID(1);
     TM_SHARED_WRITE(global_edgeNum,
                     ((long)TM_SHARED_READ(global_edgeNum) + i_edgePtr));
-    TM_END();
+    TM_END_ID(1);
 
     thread_barrier_wait();
 
@@ -1318,7 +1318,7 @@ genScalData (void* argPtr)
     TM_BEGIN_ID(2);
     TM_SHARED_WRITE(global_edgeNum,
                     ((long)TM_SHARED_READ(global_edgeNum) + i_edgePtr));
-    TM_END();
+    TM_END_ID(2);
 
 
     thread_barrier_wait();
@@ -1400,7 +1400,7 @@ genScalData (void* argPtr)
     TM_BEGIN_ID(3);
     TM_SHARED_WRITE(global_numStrWtEdges,
                     ((long)TM_SHARED_READ(global_numStrWtEdges) + numStrWtEdges));
-    TM_END();
+    TM_END_ID(3);
 
     thread_barrier_wait();
 

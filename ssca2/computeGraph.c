@@ -189,7 +189,7 @@ computeGraph (void* argPtr)
     long new_maxNumVertices = MAX_nogcc(tmp_maxNumVertices, maxNumVertices) + 1;
 #endif
     TM_SHARED_WRITE(global_maxNumVertices, new_maxNumVertices);
-    TM_END();
+    TM_END_ID(4);
 
     thread_barrier_wait();
 
@@ -306,7 +306,7 @@ computeGraph (void* argPtr)
         global_outVertexListSize,
         ((long)TM_SHARED_READ(global_outVertexListSize) + outVertexListSize)
     );
-    TM_END();
+    TM_END_ID(5);
 
     thread_barrier_wait();
 
@@ -498,7 +498,7 @@ computeGraph (void* argPtr)
                     }
                     TM_SHARED_WRITE(a[inDegree % MAX_CLUSTER_SIZE], i);
                 }
-                TM_END();
+                TM_END_ID(6);
             }
         }
     } /* for i */

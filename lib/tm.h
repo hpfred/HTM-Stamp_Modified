@@ -369,7 +369,7 @@
 #    define P_MALLOC(size)              malloc(size)
 #    define P_FREE(ptr)                 free(ptr)
 #    define TM_MALLOC(size)             malloc(size)
-#    define TM_FREE(ptr)                free(ptr)
+#    define TM_FREE(ptr)                if(!getenv("PREFETCHING") || thread_getId()%2==0) free(ptr)
 #endif /* !USE_TLH */
 
 #ifdef __bgq__
@@ -382,10 +382,13 @@
 #    define TM_EARLY_RELEASE(var)         /* nothing */
 #else /* ! __bgq__ */
 #define CONTINUE 1
-#    define TM_BEGIN()                    if(tbegin_ibm(0)) continue;
-#    define TM_BEGIN_ID(id)               if(tbegin_ibm(id)) continue;
-#    define TM_BEGIN_RO()                 if(tbegin_ibm()) continue;
-#    define TM_END()                      tend_ibm()
+#    define TM_BEGIN()                    if(tbegin_ibm(0)) goto tm_end0;
+#    define TM_BEGIN_ID(id)               if(tbegin_ibm(id)) goto tm_end ## id;
+#    define TM_BEGIN_RO()                 if(tbegin_ibm()) goto tm_end;
+#    define TM_END()                      tend_ibm();  \
+tm_end0:
+#    define TM_END_ID(id)                      tend_ibm();  \
+tm_end ## id:
 #    define TM_RESTART()                  tabort_ibm()
 #    define TM_EARLY_RELEASE(var)         /* nothing */
 #endif /* ! __bgq__ */
@@ -780,9 +783,9 @@ static inline float resume_write_float(volatile float *varp,float val) {
 #  define TM_SHARED_READ_P(var)         (var)
 #  define TM_SHARED_READ_F(var)         (var)
 
-#  define TM_SHARED_WRITE(var, val)     ({var = val; var;})
-#  define TM_SHARED_WRITE_P(var, val)   ({var = val; var;})
-#  define TM_SHARED_WRITE_F(var, val)   ({var = val; var;})
+#  define TM_SHARED_WRITE(var, val)     ({ if(!getenv("PREFETCHING") || thread_getId()%2==0) var = val; var;})
+#  define TM_SHARED_WRITE_P(var, val)   ({ if(!getenv("PREFETCHING") || thread_getId()%2==0) var = val; var;})
+#  define TM_SHARED_WRITE_F(var, val)   ({ if(!getenv("PREFETCHING") || thread_getId()%2==0) var = val; var;})
 
 #  define TM_LOCAL_WRITE(var, val)      ({var = val; var;})
 #  define TM_LOCAL_WRITE_P(var, val)    ({var = val; var;})
