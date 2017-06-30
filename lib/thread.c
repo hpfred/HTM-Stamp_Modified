@@ -11,48 +11,48 @@
  *
  * For the license of bayes/sort.h and bayes/sort.c, please see the header
  * of the files.
- * 
+ *
  * ------------------------------------------------------------------------
- * 
+ *
  * For the license of kmeans, please see kmeans/LICENSE.kmeans
- * 
+ *
  * ------------------------------------------------------------------------
- * 
+ *
  * For the license of ssca2, please see ssca2/COPYRIGHT
- * 
+ *
  * ------------------------------------------------------------------------
- * 
+ *
  * For the license of lib/mt19937ar.c and lib/mt19937ar.h, please see the
  * header of the files.
- * 
+ *
  * ------------------------------------------------------------------------
- * 
+ *
  * For the license of lib/rbtree.h and lib/rbtree.c, please see
  * lib/LEGALNOTICE.rbtree and lib/LICENSE.rbtree
- * 
+ *
  * ------------------------------------------------------------------------
- * 
+ *
  * Unless otherwise noted, the following license applies to STAMP files:
- * 
+ *
  * Copyright (c) 2007, Stanford University
  * All rights reserved.
- * 
+ *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
  * met:
- * 
+ *
  *     * Redistributions of source code must retain the above copyright
  *       notice, this list of conditions and the following disclaimer.
- * 
+ *
  *     * Redistributions in binary form must reproduce the above copyright
  *       notice, this list of conditions and the following disclaimer in
  *       the documentation and/or other materials provided with the
  *       distribution.
- * 
+ *
  *     * Neither the name of Stanford University nor the names of its
  *       contributors may be used to endorse or promote products derived
  *       from this software without specific prior written permission.
- * 
+ *
  * THIS SOFTWARE IS PROVIDED BY STANFORD UNIVERSITY ``AS IS'' AND ANY
  * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
  * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
@@ -67,10 +67,8 @@
  *
  * =============================================================================
  */
-/* Copyright (c) IBM Corp. 2014. */
 
 
-#include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
 #include "thread.h"
@@ -80,7 +78,6 @@ static THREAD_KEY_T    global_threadId;
 static long              global_numThread       = 1;
 static THREAD_BARRIER_T* global_barrierPtr      = NULL;
 static long*             global_threadIds       = NULL;
-static THREAD_ATTR_T     global_threadAttr;
 static THREAD_T*         global_threads         = NULL;
 static void            (*global_funcPtr)(void*) = NULL;
 static void*             global_argPtr          = NULL;
@@ -92,7 +89,6 @@ THREAD_MUTEX_T global_lock;
 volatile int global_lock;
 #endif
 #endif
-
 
 /* =============================================================================
  * threadWait
@@ -111,9 +107,7 @@ threadWait (void* argPtr)
         if (global_doShutdown) {
             break;
         }
-
         global_funcPtr(global_argPtr);
-
         THREAD_BARRIER(global_barrierPtr, threadId); /* wait for end parallel */
         if (threadId == 0) {
             break;
@@ -134,40 +128,38 @@ thread_startup (long numThread)
     long i;
 
     global_numThread = numThread;
-
     global_doShutdown = FALSE;
-
-#ifdef GLOBAL_LOCK
-#ifdef USE_MUTEX
-    THREAD_MUTEX_INIT(global_lock);
-#endif
-#endif
 
     /* Set up barrier */
     assert(global_barrierPtr == NULL);
-    global_barrierPtr = THREAD_BARRIER_ALLOC(global_numThread);
+    global_barrierPtr = THREAD_BARRIER_ALLOC(numThread);
     assert(global_barrierPtr);
-    THREAD_BARRIER_INIT(global_barrierPtr, global_numThread);
+    THREAD_BARRIER_INIT(global_barrierPtr, numThread);
 
     /* Set up ids */
     THREAD_KEY_INIT(global_threadId);
     assert(global_threadIds == NULL);
-    global_threadIds = (long*)malloc(global_numThread * sizeof(long));
+    global_threadIds = (long*)malloc(numThread * sizeof(long));
     assert(global_threadIds);
-    for (i = 0; i < global_numThread; i++) {
+    for (i = 0; i < numThread; i++) {
         global_threadIds[i] = i;
     }
 
     /* Set up thread list */
     assert(global_threads == NULL);
-    global_threads = (THREAD_T*)malloc(global_numThread * sizeof(THREAD_T));
+    global_threads = (THREAD_T*)malloc(numThread * sizeof(THREAD_T));
     assert(global_threads);
 
     /* Set up pool */
-    THREAD_ATTR_INIT(global_threadAttr);
-    for (i = 1; i < global_numThread; i++) {
+    for (i = 1; i < numThread; i++) {
+        THREAD_ATTR_T attr;
+    	THREAD_ATTR_INIT(attr);
+
+		pthread_attr_init(&attr);
+		pthread_attr_setscope(&attr, PTHREAD_SCOPE_SYSTEM);
+
         THREAD_CREATE(global_threads[i],
-                      global_threadAttr,
+                      attr,
                       &threadWait,
                       &global_threadIds[i]);
     }
@@ -208,7 +200,10 @@ thread_shutdown ()
     global_doShutdown = TRUE;
     THREAD_BARRIER(global_barrierPtr, 0);
 
-    for (long i = 1; i < global_numThread; i++) {
+    long numThread = global_numThread;
+
+    long i;
+    for (i = 1; i < numThread; i++) {
         THREAD_JOIN(global_threads[i]);
     }
 
@@ -224,6 +219,7 @@ thread_shutdown ()
     global_numThread = 1;
 }
 
+#ifdef LOG_BARRIER
 
 /* =============================================================================
  * thread_barrier_alloc
@@ -236,11 +232,7 @@ thread_barrier_alloc (long numThread)
 
     assert(numThread > 0);
     assert((numThread & (numThread - 1)) == 0); /* must be power of 2 */
-#ifdef USE_SPIN_BARRIER
-    barrierPtr = (thread_barrier_t *)malloc(sizeof(thread_barrier_t));
-#else
     barrierPtr = (thread_barrier_t*)malloc(numThread * sizeof(thread_barrier_t));
-#endif
     if (barrierPtr != NULL) {
         barrierPtr->numThread = numThread;
     }
@@ -267,13 +259,6 @@ thread_barrier_free (thread_barrier_t* barrierPtr)
 void
 thread_barrier_init (thread_barrier_t* barrierPtr)
 {
-#ifdef USE_SPIN_BARRIER
-    barrierPtr->reachBarrier = barrierPtr->numThread;
-    barrierPtr->leaveBarrier = barrierPtr->numThread;
-    barrierPtr->reachBarrierFlag = 1;
-    barrierPtr->leaveBarrierFlag = 0;
-    /*barrierPtr->debugCounter = 0;*/
-#else
     long i;
     long numThread = barrierPtr->numThread;
 
@@ -283,42 +268,8 @@ thread_barrier_init (thread_barrier_t* barrierPtr)
         THREAD_COND_INIT(barrierPtr[i].proceedCond);
         THREAD_COND_INIT(barrierPtr[i].proceedAllCond);
     }
-#endif
 }
 
-#ifdef USE_SPIN_BARRIER
-static int32_t
-decrement_and_get(volatile int32_t *ptr)
-{
-#if defined(__370__)
-    int32_t local_value;
-    int32_t new_value;
-    local_value = *ptr;
-    do {
-	new_value = local_value - 1;
-    } while (cs((cs_t *)&local_value, (cs_t *)ptr, *(cs_t *)&new_value));
-
-    return new_value;
-    /*
-#elif defined(__GNUC__) && defined(__x86_64__)
-    return __atomic_sub_fetch(ptr,1,__ATOMIC_SEQ_CST);
-    */
-#elif defined(__GNUC__)
-    int32_t local_value;
-    int32_t new_value;
-    do {
-      local_value = *ptr;
-      new_value = local_value - 1;
-    } while (! __sync_bool_compare_and_swap(ptr, local_value, new_value));
-
-    return new_value;
-#elif defined(__IBMC__)
-    return __sync_sub_and_fetch(ptr,1);
-#else
-#error
-#endif
-}
-#endif
 
 /* =============================================================================
  * thread_barrier
@@ -328,33 +279,6 @@ decrement_and_get(volatile int32_t *ptr)
 void
 thread_barrier (thread_barrier_t* barrierPtr, long threadId)
 {
-#ifdef USE_SPIN_BARRIER
-    /*fprintf(stderr, "Entering barrier %d: %ld\n", barrierPtr->debugCounter, threadId);*/
-    while (barrierPtr->leaveBarrierFlag == 1)
-	;
-    if (decrement_and_get(&barrierPtr->reachBarrier) == 0) {
-	/*barrierPtr->debugCounter++;*/
-	barrierPtr->reachBarrier = barrierPtr->numThread;
-	barrierPtr->leaveBarrierFlag = 1;
-#if !defined(__370__) && (defined(__GNUC__) || defined(__IBMC__))
-	__sync_synchronize();
-#endif
-	barrierPtr->reachBarrierFlag = 0;
-    } else {
-	while (barrierPtr->reachBarrierFlag == 1)
-	    ;
-    }
-
-    if (decrement_and_get(&barrierPtr->leaveBarrier) == 0) {
-	barrierPtr->leaveBarrier = barrierPtr->numThread;
-	barrierPtr->reachBarrierFlag = 1;
-#if !defined(__370__) && (defined(__GNUC__) || defined(__IBMC__))
-	__sync_synchronize();
-#endif
-	barrierPtr->leaveBarrierFlag = 0;
-    }
-    /*fprintf(stderr, "Exiting barrier %d: %ld\n", barrierPtr->debugCounter - 1, threadId);*/
-#else
     long i = 2;
     long base = 0;
     long index;
@@ -400,7 +324,62 @@ thread_barrier (thread_barrier_t* barrierPtr, long threadId)
         THREAD_COND_SIGNAL(barrierPtr[index].proceedAllCond);
         THREAD_MUTEX_UNLOCK(barrierPtr[index].countLock);
     }
-#endif
+}
+
+#else
+
+typedef struct barrier {
+    pthread_cond_t complete;
+    pthread_mutex_t mutex;
+    int count;
+    int crossing;
+} barrier_t;
+
+barrier_t *barrier_alloc() {
+    return (barrier_t *)malloc(sizeof(barrier_t));
+}
+
+void barrier_free(barrier_t *b) {
+    free(b);
+}
+
+void barrier_init(barrier_t *b, int n) {
+    pthread_cond_init(&b->complete, NULL);
+    pthread_mutex_init(&b->mutex, NULL);
+    b->count = n;
+    b->crossing = 0;
+}
+
+void barrier_cross(barrier_t *b) {
+    pthread_mutex_lock(&b->mutex);
+    /* One more thread through */
+    b->crossing++;
+    /* If not all here, wait */
+    if (b->crossing < b->count) {
+        pthread_cond_wait(&b->complete, &b->mutex);
+    } else {
+        /* Reset for next time */
+        b->crossing = 0;
+        pthread_cond_broadcast(&b->complete);
+    }
+    pthread_mutex_unlock(&b->mutex);
+}
+
+
+#endif /* !LOG_BARRIER */
+
+/* =============================================================================
+ * thread_barrier_wait
+ * -- Call after thread_start() to synchronize threads inside parallel region
+ * =============================================================================
+ */
+void
+thread_barrier_wait()
+{
+#ifndef SIMULATOR
+    long threadId = thread_getId();
+#endif /* !SIMULATOR */
+    THREAD_BARRIER(global_barrierPtr, threadId);
 }
 
 
@@ -427,20 +406,6 @@ thread_getNumThread()
     return global_numThread;
 }
 
-
-/* =============================================================================
- * thread_barrier_wait
- * -- Call after thread_start() to synchronize threads inside parallel region
- * =============================================================================
- */
-void
-thread_barrier_wait()
-{
-#ifndef SIMULATOR
-    long threadId = thread_getId();
-#endif /* !SIMULATOR */
-    THREAD_BARRIER(global_barrierPtr, threadId);
-}
 
 
 /* =============================================================================

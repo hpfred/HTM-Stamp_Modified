@@ -7,14 +7,12 @@
 
 PROG := redblacktree
 
-SRCS += \
-	redblacktree.cpp \
-	rbtree-htm.cpp \
-	$(LIB)/mt19937ar.c \
+SRCS += $(LIB)/mt19937ar.c \
 	$(LIB)/random.c \
 	$(LIB)/thread.c \
-#
-OBJS := ${SRCS:.c=.o}
+
+CXXSRCS := redblacktree.cpp \
+        rbtree-htm.cpp \
 
 
 # ==============================================================================

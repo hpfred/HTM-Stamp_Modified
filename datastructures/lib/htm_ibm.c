@@ -360,6 +360,7 @@ tm_thread_enter_ibm()
         CPU_SET( tls->tid/2*8+tls->tid%2, &cpuset);
     //	CPU_SET( tls->tid/2*8+i, &cpuset);
     }else
+        //CPU_SET( tls->tid*8%80+tls->tid/5*80, &cpuset);
         CPU_SET( tls->tid*8, &cpuset);
   //}
 
@@ -784,7 +785,7 @@ tend_ibm()
     tend();
   }
 
-  ctxs[tls->tid].completed_txs++;
+//  ctxs[tls->tid].completed_txs++;
 
 
   TIMER_READ(tls->stop);

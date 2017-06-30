@@ -33,7 +33,10 @@
 #include <time.h>
 #include <vector>
 
+extern "C" {
 #include "tm.h"
+}
+
 #include "thread.h"
 
 #define DEFAULT_DURATION                10000
@@ -160,24 +163,24 @@ void test(void *data)
                   /* Add random value */
                   val = (random_generate(randomPtr) % pruned_range) + 1;
 		  ro = 0;
-		  TM_BEGIN(0);
+		  TM_BEGIN_ID(0);
                   set_add(TM_ARG set, val);
-		  TM_END();;
+		  TM_END_ID(0);
               } else {
                   /* Remove random value */
                   val = (random_generate(randomPtr) % pruned_range) + 1;
 		  ro = 0;
-                  TM_BEGIN(1);
+                  TM_BEGIN_ID(1);
                   set_remove(TM_ARG set, val);
-		  TM_END();
+		  TM_END_ID(1);
               }
           } else {
               /* Look for random value */
               long tmp = (random_generate(randomPtr) % pruned_range) + 1;
 	      ro = 1;
-	      TM_BEGIN_EXT(2,1);
+	      TM_BEGIN_ID(2);
               set_contains(TM_ARG set, tmp);
-	      TM_END();
+	      TM_END_ID(2);
           }
 
       }
@@ -197,8 +200,6 @@ void test(void *data)
 MAIN(argc, argv) {
     TIMER_T start;
     TIMER_T stop;
-
-    SETUP_NUMBER_TASKS(3);
 
   struct option long_options[] = {
     // These options don't set a flag
@@ -226,8 +227,6 @@ MAIN(argc, argv) {
   int attempts = DEFAULT_REPEAT;
   accessesPerOperations = DEFAULT_ACCESSES_PER_OPERATION;
   alpha_value = DEFAULT_ALPHA;
-
-  SETUP_NUMBER_THREADS(nb_threads);
 
   while(1) {
     i = 0;
@@ -311,12 +310,12 @@ printf("range after alpha: %ld\n", (long)(range*alpha_value));
 
   /* Init STM */
   SIM_GET_NUM_CPU(nb_threads);
-  TM_STARTUP(nb_threads, RBT_ID);
+  TM_STARTUP(nb_threads);
   P_MEMORY_STARTUP(nb_threads);
   thread_startup(nb_threads);
 
 double time_total = 0.0;
-double energy_total = 0.0;
+
 for (; attempts > 0; --attempts) {
 
   set = set_new();
@@ -337,7 +336,7 @@ for (; attempts > 0; --attempts) {
   GOTO_REAL();
   TIMER_READ(stop);
 double time_tmp = TIMER_DIFF_SECONDS(start, stop);
-PRINT_STATS();
+
 time_total += time_tmp;
 
 }

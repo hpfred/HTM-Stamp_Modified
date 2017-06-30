@@ -11,48 +11,48 @@
  *
  * For the license of bayes/sort.h and bayes/sort.c, please see the header
  * of the files.
- * 
+ *
  * ------------------------------------------------------------------------
- * 
+ *
  * For the license of kmeans, please see kmeans/LICENSE.kmeans
- * 
+ *
  * ------------------------------------------------------------------------
- * 
+ *
  * For the license of ssca2, please see ssca2/COPYRIGHT
- * 
+ *
  * ------------------------------------------------------------------------
- * 
+ *
  * For the license of lib/mt19937ar.c and lib/mt19937ar.h, please see the
  * header of the files.
- * 
+ *
  * ------------------------------------------------------------------------
- * 
+ *
  * For the license of lib/rbtree.h and lib/rbtree.c, please see
  * lib/LEGALNOTICE.rbtree and lib/LICENSE.rbtree
- * 
+ *
  * ------------------------------------------------------------------------
- * 
+ *
  * Unless otherwise noted, the following license applies to STAMP files:
- * 
+ *
  * Copyright (c) 2007, Stanford University
  * All rights reserved.
- * 
+ *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
  * met:
- * 
+ *
  *     * Redistributions of source code must retain the above copyright
  *       notice, this list of conditions and the following disclaimer.
- * 
+ *
  *     * Redistributions in binary form must reproduce the above copyright
  *       notice, this list of conditions and the following disclaimer in
  *       the documentation and/or other materials provided with the
  *       distribution.
- * 
+ *
  *     * Neither the name of Stanford University nor the names of its
  *       contributors may be used to endorse or promote products derived
  *       from this software without specific prior written permission.
- * 
+ *
  * THIS SOFTWARE IS PROVIDED BY STANFORD UNIVERSITY ``AS IS'' AND ANY
  * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
  * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
@@ -67,7 +67,6 @@
  *
  * =============================================================================
  */
-/* Copyright (c) IBM Corp. 2014. */
 
 
 #ifndef THREAD_H
@@ -76,7 +75,6 @@
 
 #include <pthread.h>
 #include <stdlib.h>
-#include <stdint.h>
 #include "types.h"
 #ifdef OTM
 #include "omp.h"
@@ -120,24 +118,25 @@ extern "C" {
 #  define THREAD_BARRIER(bar, tid)          pthread_barrier_wait(bar)
 #  define THREAD_BARRIER_FREE(bar)          free(bar)
 #else /* !SIMULATOR */
+
+#ifdef LOG_BARRIER
 #  define THREAD_BARRIER_T                  thread_barrier_t
 #  define THREAD_BARRIER_ALLOC(N)           thread_barrier_alloc(N)
 #  define THREAD_BARRIER_INIT(bar, N)       thread_barrier_init(bar)
 #  define THREAD_BARRIER(bar, tid)          thread_barrier(bar, tid)
 #  define THREAD_BARRIER_FREE(bar)          thread_barrier_free(bar)
+#else
+#  define THREAD_BARRIER_T                  barrier_t
+#  define THREAD_BARRIER_ALLOC(N)           barrier_alloc()
+#  define THREAD_BARRIER_INIT(bar, N)       barrier_init(bar, N)
+#  define THREAD_BARRIER(bar, tid)          barrier_cross(bar)
+#  define THREAD_BARRIER_FREE(bar)          barrier_free(bar)
+#endif /* !LOG_BARRIER */
 #endif /* !SIMULATOR */
 
-#define USE_SPIN_BARRIER
-#ifdef USE_SPIN_BARRIER
-typedef struct thread_barrier {
-  volatile int32_t reachBarrier;
-  volatile int32_t leaveBarrier;
-  volatile int reachBarrierFlag;
-  volatile int leaveBarrierFlag;
-  int32_t numThread;
-  /*volatile int debugCounter;*/
-} thread_barrier_t;
-#else
+
+
+#ifdef LOG_BARRIER
 typedef struct thread_barrier {
     THREAD_MUTEX_T countLock;
     THREAD_COND_T proceedCond;
@@ -145,7 +144,20 @@ typedef struct thread_barrier {
     long count;
     long numThread;
 } thread_barrier_t;
-#endif
+#else
+
+struct barrier;
+typedef struct barrier barrier_t;
+
+barrier_t *barrier_alloc();
+
+void barrier_free(barrier_t *b);
+
+void barrier_init(barrier_t *b, int n);
+
+void barrier_cross(barrier_t *b);
+
+#endif /* LOG_BARRIER */
 
 
 /* =============================================================================
@@ -178,6 +190,7 @@ void
 thread_shutdown ();
 
 
+#ifdef LOG_BARRIER
 /* =============================================================================
  * thread_barrier_alloc
  * =============================================================================
@@ -210,6 +223,16 @@ thread_barrier_init (thread_barrier_t* barrierPtr);
 void
 thread_barrier (thread_barrier_t* barrierPtr, long threadId);
 
+#endif /* LOG_BARRIER */
+
+
+/* =============================================================================
+ * thread_barrier_wait
+ * -- Call after thread_start() to synchronize threads inside parallel region
+ * =============================================================================
+ */
+void
+thread_barrier_wait();
 
 /* =============================================================================
  * thread_getId
@@ -229,23 +252,6 @@ long
 thread_getNumThread();
 
 
-/* =============================================================================
- * thread_barrier_wait
- * -- Call after thread_start() to synchronize threads inside parallel region
- * =============================================================================
- */
-void
-thread_barrier_wait();
-
-#ifdef GLOBAL_LOCK
-#define USE_MUTEX
-
-#ifdef USE_MUTEX
-extern THREAD_MUTEX_T global_lock;
-#else
-extern volatile int global_lock;
-#endif
-#endif
 
 #ifdef __cplusplus
 }

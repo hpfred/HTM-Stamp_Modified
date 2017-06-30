@@ -76,7 +76,11 @@
 
 
 #include <inttypes.h>
+extern "C" {
 #include "tm.h"
+}
+#include "thread.h"
+
 #include "rbtree.h"
 
 
