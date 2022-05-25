@@ -81,3 +81,4 @@ ___References___
 [2] D. Dice, O. Shalev, and N. Shavit. Transactional Locking II. In
     Proceedings of the 20th International Symposium on Distributed Computing
     (DISC), 2006.
+# HTM-STamp_Modified
