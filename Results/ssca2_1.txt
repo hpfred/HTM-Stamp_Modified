@@ -1,0 +1,29 @@
+
+end_of_execution
+1 - ssca2
+0m0,009s 0m0,005s
+0m15,277s 0m1,397s
+
+
+
+end_of_execution
+2 - ssca2
+0m0,010s 0m0,009s
+0m35,410s 0m2,291s
+
+
+
+end_of_execution
+3 - ssca2
+0m0,013s 0m0,011s
+0m54,662s 0m3,234s
+
+
+
+end_of_execution
+4 - ssca2
+0m0,013s 0m0,016s
+1m13,730s 0m4,138s
+
+
+

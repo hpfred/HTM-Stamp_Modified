@@ -1,29 +1,29 @@
 
 end_of_execution
 1 - labyrinth
-0m0,009s 0m0,000s
-0m6,983s 0m0,270s
+0m0,009s 0m0,004s
+0m12,553s 0m1,315s
 
 
 
 end_of_execution
 2 - labyrinth
-0m0,011s 0m0,000s
-0m14,035s 0m0,486s
+0m0,010s 0m0,009s
+0m33,508s 0m2,188s
 
 
 
 end_of_execution
 3 - labyrinth
-0m0,013s 0m0,000s
-0m21,058s 0m0,711s
+0m0,013s 0m0,011s
+0m52,767s 0m3,118s
 
 
 
 end_of_execution
 4 - labyrinth
-0m0,016s 0m0,000s
-0m28,070s 0m0,967s
+0m0,013s 0m0,016s
+1m11,796s 0m4,007s
 
 
 

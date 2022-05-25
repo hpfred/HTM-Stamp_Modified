@@ -2,8 +2,17 @@
 ##  chmod 777 [nome_arquivo.sh]
 
 ##Define caracteristicas da execução
-listaBenchs=("bayes" "kmeans" "labyrinth" "vacation")
-numExecs=4; #30;
+listaBenchs=(
+            "bayes"
+            "genome"
+            "intruder"
+            "kmeans"
+            "labyrinth"
+            "ssca2"
+            "vacation"
+            "yada"
+            )
+numExecs=30; #30;
 ##----------------------------------
 
 # cd htm-stamp/;
@@ -12,6 +21,8 @@ if [ ! -d $PWD/Results ]
 then
     mkdir Results
 fi;
+
+SECONDS=0
 
 for benchs in ${listaBenchs[*]}
 do
@@ -107,3 +118,6 @@ do
     done;
 
 done;
+
+echo -e "\n\n"
+echo "Tempo Final: $((($SECONDS / 60) % 60))min $(($SECONDS % 60))sec"

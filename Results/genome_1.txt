@@ -1,0 +1,45 @@
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... end_of_execution
+1 - genome
+0m0,008s 0m0,004s
+0m10,936s 0m1,173s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... end_of_execution
+2 - genome
+0m0,010s 0m0,007s
+0m31,927s 0m2,055s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... end_of_execution
+3 - genome
+0m0,011s 0m0,011s
+0m51,129s 0m2,980s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... end_of_execution
+4 - genome
+0m0,013s 0m0,014s
+1m10,206s 0m3,866s
+
+
+

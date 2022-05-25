@@ -1,0 +1,45 @@
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation...end_of_execution
+1 - yada
+0m0,010s 0m0,006s
+0m25,103s 0m1,701s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation...end_of_execution
+2 - yada
+0m0,010s 0m0,010s
+0m44,296s 0m2,640s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation...end_of_execution
+3 - yada
+0m0,013s 0m0,013s
+1m3,505s 0m3,562s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation...end_of_execution
+4 - yada
+0m0,013s 0m0,017s
+1m23,136s 0m4,479s
+
+
+
