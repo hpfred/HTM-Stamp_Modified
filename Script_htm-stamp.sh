@@ -3,41 +3,37 @@
 
 ##Define caracteristicas da execução
 listaBenchs=("bayes" "kmeans" "labyrinth" "vacation")
-numExecs=2; #30;
+numExecs=4; #30;
 ##----------------------------------
 
-#cd htm-stamp/;
+# cd htm-stamp/;
 
 if [ ! -d $PWD/Results ]
+then
     mkdir Results
 fi;
 
-#Só quer a compilação e criação do arquivo de resultados uma vez
 for benchs in ${listaBenchs[*]}
 do
     cd $benchs;
 
-    # make -f Makefile.hle_intel clean;
-    # make -f Makefile.hle_intel default;
+    make -f Makefile.hle_intel clean;
+    make -f Makefile.hle_intel default;
 
     echo >  ../Results/"$benchs"_1.txt;
 
-    #if [[ "$benchs" == "kmeans" ]] #if [ "$benchs" = "kmeans" ] 
     if [[ "$benchs" = "kmeans" || "$benchs" = "vacation" ]]
     then
-        # echo -e "\n$benchs what\n"
         echo >  ../Results/"$benchs"_2.txt;
     fi;
 
-    #Vai ter casos que os arquivos de input dentro da pasta do programa podem estar zipados, ver como vai ser feito pra verificar isso
+    ##Se arquivos de input estiverem como gunzip ele irá descompactar
     if [ -d $PWD/inputs ]
     then
-        # echo "--Tem pasta inputs--"
-        #if [ -f *.gz ]tem problema pq se houver mais de um arquivo ele retorna falso
+        ##if [ -f *.gz ] tem problema pq se houver mais de um arquivo ele retorna falso
         cd inputs
-        if ls *.gz >/dev/null 2>&1 #&& name-gz != true
+        if ls *.gz >/dev/null 2>&1
         then
-            #echo "--Tem arquivo gunzip--"
             yes n | gzip -dk *.gz >/dev/null 2>&1
         fi;
         cd ../
@@ -46,17 +42,12 @@ do
     cd ../
 done;
 
-#for i in {1..3}    #for i in $(eval echo "{1..$numExecs}")
 for i in $(seq 1 $numExecs)
 do
     
-    # echo -e "\n--Entrando na exec $i--\n"
-
     for benchs in ${listaBenchs[*]}
     do
         cd $benchs;
-
-        # echo -e "\n--Entrando no bench $benchs--\n"
 
         if [ "$benchs" = "bayes" ]
         then
@@ -92,33 +83,27 @@ do
             params2="";
         fi;
 
-        # echo -e "\n--Parametros de $benchs: $params--\n"
-
-        # ./"$benchs".hle_intel $params >> ../Results/"$benchs"_1.txt #"$benchs"_1.txt
-        #echo "end_of_execution" >> ../Results/"$benchs"_1.txt
+        #./"$benchs".hle_intel $params >> ../Results/"$benchs"_1.txt #"$benchs"_1.txt
+        eval "./"$benchs".hle_intel $params" >> ../Results/"$benchs"_1.txt #"$benchs"_1.txt
+        echo "end_of_execution" >> ../Results/"$benchs"_1.txt
         echo "$i - $benchs" >> ../Results/"$benchs"_1.txt
         times >> ../Results/"$benchs"_1.txt
-        echo "end_of_execution" >> ../Results/"$benchs"_1.txt
         echo -e "\n\n" >> ../Results/"$benchs"_1.txt
-        #echo "Numero $i"
         echo "$i - $benchs"
         times
 
         if [[ -n $params2 ]]
         then
-            # echo -e "\n--Entrou em $benchs high contention--\n"
-            # ./"$benchs".hle_intel $params2 >> ../Results/"$benchs"_2.txt
+            eval "./"$benchs".hle_intel $params2" >> ../Results/"$benchs"_2.txt
+            echo "end_of_execution" >> ../Results/"$benchs"_2.txt
             echo "$i - $benchs" >> ../Results/"$benchs"_2.txt
             times >> ../Results/"$benchs"_2.txt
-            echo "end_of_execution" >> ../Results/"$benchs"_2.txt
             echo -e "\n\n" >> ../Results/"$benchs"_2.txt
-            #echo "Numero $i"
             echo "$i - $benchs"
             times
         fi;
         
         cd ../;
     done;
-    
-    #exit;
+
 done;
