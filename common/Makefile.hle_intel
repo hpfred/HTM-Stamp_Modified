@@ -6,7 +6,7 @@
 # Copyright (c) IBM Corp. 2014, and others.
 
 CFLAGS += -DHLE_INTEL
-# CFLAGS += -mrtm		# x86_64 GCC
+CFLAGS += -mrtm		# x86_64 GCC
 # CFLAGS += -mhtm		# PPC GCC
 #LDFLAGS += -static
 

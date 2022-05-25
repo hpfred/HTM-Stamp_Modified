@@ -1,0 +1,14 @@
+1 - bayes
+0m0,000s 0m0,007s
+0m0,004s 0m0,000s
+end_of_execution
+
+
+
+2 - bayes
+0m0,000s 0m0,008s
+0m0,004s 0m0,000s
+end_of_execution
+
+
+

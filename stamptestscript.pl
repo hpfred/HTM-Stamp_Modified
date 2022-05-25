@@ -37,16 +37,16 @@ use Cwd;
 #@Algs = ("NOrec");
 
 # Maximum thread count
-$MaxThreadCount = 20;
+$MaxThreadCount = 2;#0;
 
 # Average or Max behavior.  "ProfileAppMax" is deprecated.
 $ProfileBehavior = "ProfileAppAvg";
 
 # Path to executables
-$ExePath = "/home/joaobarreto/stamp-master/";
+$ExePath = "";	#"~/OpenSTMP-master/stamp/";
 
 # Average of how many trials?
-$Trials = 3;
+$Trials = 1#3;
 
 # LD_PRELOAD configuration (e.g., to use libhoard on Linux)
 $LDP = "";
@@ -103,7 +103,10 @@ foreach $b (@Benches) {
 
             for ($t = 0; $t < $Trials; $t++) {
                 print ".";
-                @res = `HTM_STATS=yes make -f Makefile.htm_ibm runlow$p`;
+                print "$cwd";
+                #@res = `HTM_STATS=yes make -f Makefile.hle_intel runlow$p`;
+                @res = `make -f Makefile.hle_intel`;
+                print "@res";
                 if((grep /Time/ , @res)){
                     @restime = grep  /Time =/ , @res;
                     $restime[0] =~ s/.*Time =//;
@@ -115,7 +118,7 @@ foreach $b (@Benches) {
                     $resgat[0] =~ s/.*#HTM_STATS global_abort_time//;
                     $valgat += int($resgat[0]);
                 } else {
-                    $t--;
+                    #$t--;
                 }
             }
             $valtime /= $Trials;

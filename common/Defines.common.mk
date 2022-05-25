@@ -34,8 +34,8 @@ LIBS     += -lm
 else
 CC       := gcc
 ifeq ($(architecture),x86_64)
-CFLAGS   += -g -Wall -pthread  # We no longer use gcc's built-in functions for TSX.
-#CFLAGS   += -g -Wall -pthread -mrtm  # For hle_intel, enable this.
+#CFLAGS   += -g -Wall -pthread  # We no longer use gcc's built-in functions for TSX.
+CFLAGS   += -g -Wall -pthread -mrtm  # For hle_intel, enable this.
 else
 ifeq ($(architecture),ppc64)
 # We need 64-bit binaries, because bayes allocates > 3GB memory.

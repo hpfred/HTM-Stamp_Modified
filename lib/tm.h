@@ -427,6 +427,7 @@ tm_end ## id:
 #    define TM_BEGIN_ID(id)               tbegin_hle(id)
 #    define TM_BEGIN_RO()                 tbegin_hle()
 #    define TM_END()                      tend_hle()
+#    define TM_END_ID(id)                   tend_hle()
 #    define TM_RESTART()                  tabort_hle()
 #    define TM_EARLY_RELEASE(var)         /* nothing */
 
