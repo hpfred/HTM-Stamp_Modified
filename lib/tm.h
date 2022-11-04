@@ -462,11 +462,17 @@ tm_end ## id:
 #    define TM_FREE(ptr)                free(ptr)
 #endif /* !USE_TLH */
 
-#    define TM_BEGIN()                    _xbegin()
-#    define TM_BEGIN_ID(id)               _xbegin()
-#    define TM_BEGIN_RO()                 _xbegin()
-#    define TM_END()                      _xend()
-#    define TM_END_ID(id)                 _xend()
+#    define TM_BEGIN()                    if ((status = _xbegin ()) == _XBEGIN_STARTED) {
+#    define TM_BEGIN_ID(id)               if ((status = _xbegin ()) == _XBEGIN_STARTED) {
+#    define TM_BEGIN_RO()                 if ((status = _xbegin ()) == _XBEGIN_STARTED) {
+#    define TM_END()                      xend ();}
+                                          //else {
+                                          //  FALLBACK
+                                          //}
+#    define TM_END_ID(id)                 xend ();}
+                                          //else {
+                                          //  FALLBACK
+                                          //}
 #    define TM_RESTART()                  _xabort(0)    //_xabort()   //XABORT recebe um parâmetro imm8 com os bits de EAX
 #    define TM_EARLY_RELEASE(var)         /* nothing */
 
