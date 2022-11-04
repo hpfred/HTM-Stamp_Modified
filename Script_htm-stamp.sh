@@ -28,8 +28,8 @@ for benchs in ${listaBenchs[*]}
 do
     cd $benchs;
 
-    make -f Makefile.hle_intel clean;
-    make -f Makefile.hle_intel default;
+    make -f Makefile.rtm_intel clean;
+    make -f Makefile.rtm_intel default;
 
     echo >  ../Results/"$benchs"_1.txt;
 
@@ -94,8 +94,8 @@ do
             params2="";
         fi;
 
-        #./"$benchs".hle_intel $params >> ../Results/"$benchs"_1.txt #"$benchs"_1.txt
-        eval "./"$benchs".hle_intel $params" >> ../Results/"$benchs"_1.txt #"$benchs"_1.txt
+        #./"$benchs".rtm_intel $params >> ../Results/"$benchs"_1.txt #"$benchs"_1.txt
+        eval "./"$benchs".rtm_intel $params" >> ../Results/"$benchs"_1.txt #"$benchs"_1.txt
         echo "end_of_execution" >> ../Results/"$benchs"_1.txt
         echo "$i - $benchs" >> ../Results/"$benchs"_1.txt
         times >> ../Results/"$benchs"_1.txt
@@ -105,7 +105,7 @@ do
 
         if [[ -n $params2 ]]
         then
-            eval "./"$benchs".hle_intel $params2" >> ../Results/"$benchs"_2.txt
+            eval "./"$benchs".rtm_intel $params2" >> ../Results/"$benchs"_2.txt
             echo "end_of_execution" >> ../Results/"$benchs"_2.txt
             echo "$i - $benchs" >> ../Results/"$benchs"_2.txt
             times >> ../Results/"$benchs"_2.txt

@@ -1,0 +1,43 @@
+# ==============================================================================
+#
+# Makefile.rtme_intel
+#
+# ==============================================================================
+# Copyright (c) IBM Corp. 2014, and others.
+
+CFLAGS += -DRTM_INTEL
+CFLAGS += -mrtm		# x86_64 GCC
+# CFLAGS += -mhtm		# PPC GCC
+#LDFLAGS += -static
+
+SRCS += $(LIB)/rtm_intel.c
+
+OBJS := ${SRCS:.c=.o}
+
+# ==============================================================================
+# Rules
+# ==============================================================================
+
+.PHONY: default
+default: $(PROG).rtm_intel
+
+.PHONY: clean cleanobj
+clean:
+	$(RM) $(OBJS) $(PROG).rtm_intel $(OUTPUT)
+
+cleanobj:
+	$(RM) $(OBJS) $(OUTPUT)
+
+$(PROG).rtm_intel: $(OBJS)
+	$(LD) $(LDFLAGS) $^ $(LIBS) -o $(PROG).rtm_intel
+
+include ../common/Makefile.common
+
+PROGRAM := ./$(PROG).rtm_intel
+
+# ==============================================================================
+#
+# Makefile.seq
+#
+# ==============================================================================
+

@@ -1,22 +1,18 @@
 # ==============================================================================
 #
-# Defines.common.mk
+# Makefile.rtm_intel
 #
 # ==============================================================================
+# Copyright (c) IBM Corp. 2014, and others.
 
 
-PROG := redblacktree
-
-SRCS += $(LIB)/mt19937ar.c \
-	$(LIB)/random.c \
-	$(LIB)/thread.c \
-
-CXXSRCS := redblacktree.cpp \
-        rbtree-htm.cpp \
-
+include ../common/Defines.common.mk
+include ./Defines.common.mk
+include ../common/Makefile.rtm_intel
 
 # ==============================================================================
 #
-# End of Defines.common.mk
+# Makefile.rtm_intel
 #
 # ==============================================================================
+

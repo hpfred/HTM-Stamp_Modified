@@ -431,6 +431,45 @@ tm_end ## id:
 #    define TM_RESTART()                  tabort_hle()
 #    define TM_EARLY_RELEASE(var)         /* nothing */
 
+/* Restricted Transactional Memory */
+#elif defined(RTM_INTEL)
+//#include "rtm_intel.h"
+#include <immintrin.h>
+
+#  define TM_ARG                        /* nothing */
+#  define TM_ARG_ALONE                  /* nothing */
+#  define TM_ARGDECL                    /* nothing */
+#  define TM_ARGDECL_ALONE              /* nothing */
+#  define TM_CALLABLE                   /* nothing */
+
+#  define TM_STARTUP(numThread)         // Aqui acredito que não seja necessário nada no caso de RTM
+#  define TM_SHUTDOWN()                 // Aqui acredito que não seja necessário nada no caso de RTM
+
+#  define TM_THREAD_ENTER()             // Aqui já não tenho tanta certeza, mas tbm acredito não ser necessário
+#  define TM_THREAD_EXIT()              // Aqui já não tenho tanta certeza, mas tbm acredito não ser necessário
+
+#ifdef USE_TLH
+#include "thread.h"
+#include "memory.h"
+#    define P_MALLOC(size)              memory_get(thread_getId(), size)    // Esse não sei se é válido em RTM
+#    define P_FREE(ptr)                 /* TODO: thread local free is non-trivial */
+#    define TM_MALLOC(size)             memory_get(thread_getId(), size)    // Esse não sei se é válido em RTM
+#    define TM_FREE(ptr)                /* TODO: thread local free is non-trivial */
+#else /* !USE_TLH */
+#    define P_MALLOC(size)              malloc(size)
+#    define P_FREE(ptr)                 free(ptr)
+#    define TM_MALLOC(size)             malloc(size)
+#    define TM_FREE(ptr)                free(ptr)
+#endif /* !USE_TLH */
+
+#    define TM_BEGIN()                    _xbegin()
+#    define TM_BEGIN_ID(id)               _xbegin()
+#    define TM_BEGIN_RO()                 _xbegin()
+#    define TM_END()                      _xend()
+#    define TM_END_ID(id)                 _xend()
+#    define TM_RESTART()                  _xabort(0)    //_xabort()   //XABORT recebe um parâmetro imm8 com os bits de EAX
+#    define TM_EARLY_RELEASE(var)         /* nothing */
+
 
 /* =============================================================================
  * STM - Software Transactional Memory
