@@ -463,13 +463,16 @@ tm_end ## id:
 #endif /* !USE_TLH */
 
 #    define TM_BEGIN()                    if ((status = _xbegin ()) == _XBEGIN_STARTED) {
+                                          //if ((status = _xbegin ()) == _XBEGIN_STARTED) { flag=1; void *ptr; ptr = &&foo;
 #    define TM_BEGIN_ID(id)               if ((status = _xbegin ()) == _XBEGIN_STARTED) {
 #    define TM_BEGIN_RO()                 if ((status = _xbegin ()) == _XBEGIN_STARTED) {
-#    define TM_END()                      xend ();}
+#    define TM_END()                      _xend ();}
                                           //else {
                                           //  FALLBACK
                                           //}
-#    define TM_END_ID(id)                 xend ();}
+                                          
+                                          //if(flag==1) { flag=0; _xend(); } else { unlock; } } else { lock; goto *ptr; }
+#    define TM_END_ID(id)                 _xend ();}
                                           //else {
                                           //  FALLBACK
                                           //}
