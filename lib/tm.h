@@ -467,17 +467,10 @@ tm_end ## id:
                                           //if ((status = _xbegin ()) == _XBEGIN_STARTED) { void function(){
 #    define TM_BEGIN_ID(id)               if ((status = _xbegin ()) == _XBEGIN_STARTED) {
 #    define TM_BEGIN_RO()                 if ((status = _xbegin ()) == _XBEGIN_STARTED) {
-#    define TM_END()                      _xend ();}
-                                          //else {
-                                          //  FALLBACK
-                                          //}
-
+#    define TM_END()                      _xend (); } //else { FALLBACK }
                                           //if(flag==1) { flag=0; _xend(); } else { unlock; } } else { lock; goto *ptr; }
                                           //} _xend (); } else { lock; function(); unlock; }
-#    define TM_END_ID(id)                 _xend ();}
-                                          //else {
-                                          //  FALLBACK
-                                          //}
+#    define TM_END_ID(id)                 _xend (); } //else { FALLBACK }
 #    define TM_RESTART()                  _xabort(0)    //_xabort()   //XABORT recebe um parâmetro imm8 com os bits de EAX
 #    define TM_EARLY_RELEASE(var)         /* nothing */
 
