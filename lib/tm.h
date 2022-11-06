@@ -444,11 +444,11 @@ tm_end ## id:
 #  define TM_ARGDECL_ALONE              /* nothing */
 #  define TM_CALLABLE                   /* nothing */
 
-#  define TM_STARTUP(numThread)         // Aqui acredito que não seja necessário nada no caso de RTM
-#  define TM_SHUTDOWN()                 // Aqui acredito que não seja necessário nada no caso de RTM
+#  define TM_STARTUP(numThread)         // 
+#  define TM_SHUTDOWN()                 // nothing
 
-#  define TM_THREAD_ENTER()             // Aqui já não tenho tanta certeza, mas tbm acredito não ser necessário
-#  define TM_THREAD_EXIT()              // Aqui já não tenho tanta certeza, mas tbm acredito não ser necessário
+#  define TM_THREAD_ENTER()             // nothing
+#  define TM_THREAD_EXIT()              // nothing
 
 #ifdef USE_TLH
 #include "thread.h"
@@ -467,13 +467,13 @@ tm_end ## id:
 #    define TM_BEGIN()                    if ((status = _xbegin ()) == _XBEGIN_STARTED) {
                                           //if ((status = _xbegin ()) == _XBEGIN_STARTED) { flag=1; void *ptr; ptr = &&foo;
                                           //if ((status = _xbegin ()) == _XBEGIN_STARTED) { void function(){
-#    define TM_BEGIN_ID(id)               if ((status = _xbegin ()) == _XBEGIN_STARTED) {
-#    define TM_BEGIN_RO()                 if ((status = _xbegin ()) == _XBEGIN_STARTED) {
+#    define TM_BEGIN_ID(id)               TM_BEGIN()      //if ((status = _xbegin ()) == _XBEGIN_STARTED) {
+#    define TM_BEGIN_RO()                 TM_BEGIN()      //if ((status = _xbegin ()) == _XBEGIN_STARTED) {
 #    define TM_END()                      _xend (); } //else { FALLBACK }
-                                          //if(flag==1) { flag=0; _xend(); } else { unlock; } } else { lock; goto *ptr; }
-                                          //} _xend (); } else { lock; function(); unlock; }
-#    define TM_END_ID(id)                 _xend (); } //else { FALLBACK }
-#    define TM_RESTART()                  _xabort(0)    //_xabort()   //XABORT recebe um parâmetro imm8 com os bits de EAX
+                                          //if(flag==1) { flag=0; _xend(); } else { do{ THREAD_MUTEX_UNLOCK(global_lock); }while(0); } } else { do{ THREAD_MUTEX_LOCK(global_lock); }while(0); goto *ptr; }
+                                          //} _xend (); } else { do{ THREAD_MUTEX_LOCK(global_lock); }while(0); function(); do{ THREAD_MUTEX_UNLOCK(global_lock); }while(0); }
+#    define TM_END_ID(id)                 TM_END()        //_xend (); } else { FALLBACK }
+#    define TM_RESTART()                  _xabort(0)      //_xabort()   //XABORT recebe um parâmetro imm8 com os bits de EAX
 #    define TM_EARLY_RELEASE(var)         /* nothing */
 
 /// Copiando o sequencial pra ver como a biblioteca lida com mutex e outras alternativas bloqueantes
