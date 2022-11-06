@@ -435,6 +435,8 @@ tm_end ## id:
 #elif defined(RTM_INTEL)
 //#include "rtm_intel.h"
 #include <immintrin.h>
+//#include <stdlib.h>   //Include pra usar mutex(?)
+//#include "thread.h"   //Include pra usar mutex(?)
 
 #  define TM_ARG                        /* nothing */
 #  define TM_ARG_ALONE                  /* nothing */
@@ -474,6 +476,46 @@ tm_end ## id:
 #    define TM_RESTART()                  _xabort(0)    //_xabort()   //XABORT recebe um parâmetro imm8 com os bits de EAX
 #    define TM_EARLY_RELEASE(var)         /* nothing */
 
+/// Copiando o sequencial pra ver como a biblioteca lida com mutex e outras alternativas bloqueantes
+/// Estou cogitando deixar só com mutex, e ver se funciona pra n ficar com um trecho de código monumental
+// #ifdef USE_MUTEX
+// #  define TM_BEGIN()			     \
+//   do {					     \
+//     THREAD_MUTEX_LOCK(global_lock);	     \
+//   } while (0)
+// #  define TM_END()			     \
+//   do {					     \
+//     THREAD_MUTEX_UNLOCK(global_lock);	     \
+//   } while (0)
+// #else /* ! USE_MUTEX */
+// #include "mfence.h"
+// #if defined(__370__)
+// #  define TM_BEGIN()						\
+//   do {								\
+//   cs_t local_value = 0; cs_t new_value = 1;			\
+//   while (cs(&local_value, (cs_t *)&global_lock, new_value)) {	\
+//     while (local_value = global_lock)				\
+//       ;								\
+//   }								\
+//   } while (0)
+// #elif defined(__GNUC__) || defined(__IBMC__)
+// #  define TM_BEGIN()						\
+//   do {								\
+//     while (__sync_val_compare_and_swap(&global_lock, 0, 1)) {	\
+//       while (global_lock)					\
+// 	;							\
+//     }								\
+//   } while (0)
+// #else
+// #error
+// #endif
+// #  define TM_END()			     \
+//   do {					     \
+//     memory_fence();			     \
+//     global_lock = 0;			     \
+//   } while (0)
+// #endif /* USE_MUTEX */
+/// Fim do trecho de código sequencial
 
 /* =============================================================================
  * STM - Software Transactional Memory
