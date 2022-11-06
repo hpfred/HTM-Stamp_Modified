@@ -10,6 +10,11 @@ CFLAGS += -mrtm		# x86_64 GCC
 # CFLAGS += -mhtm		# PPC GCC
 #LDFLAGS += -static
 
+# Somente pra testar os fallbacks, remover depois
+CFLAGS += -DFALLBACK_0
+#CFLAGS += -DFALLBACK_1
+#CFLAGS += -DFALLBACK_2
+
 SRCS += $(LIB)/rtm_intel.c
 
 OBJS := ${SRCS:.c=.o}
