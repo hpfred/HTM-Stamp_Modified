@@ -435,8 +435,8 @@ tm_end ## id:
 #elif defined(RTM_INTEL)
 //#include "rtm_intel.h"
 #include <immintrin.h>
-//#include <stdlib.h>   //Include pra usar mutex
-//#include "thread.h"   //Include pra usar mutex
+#include <stdlib.h>   //Include pra usar mutex
+#include "thread.h"   //Include pra usar mutex
 
 #  define TM_ARG                        /* nothing */
 #  define TM_ARG_ALONE                  /* nothing */
@@ -478,14 +478,15 @@ tm_end ## id:
 
 ///Forma de testar mais rápido, mudar de volta depois
 #ifdef FALLBACK_0
-#    define TM_BEGIN()                    if ((status = _xbegin ()) == _XBEGIN_STARTED) {
-#    define TM_END()                      _xend (); }
+#    define TM_BEGIN()                    if ((_xbegin ()) == _XBEGIN_STARTED) { printf("Entrou\n")
+#    define TM_END()                      _xend (); printf("Saiu\n"); } else { printf("Fallback\n"); }
 #elif defined(FALLBACK_1)
-#    define TM_BEGIN()                    if ((status = _xbegin ()) == _XBEGIN_STARTED) { flag=1; void *ptr; ptr = &&foo;
+#    define TM_BEGIN()                    if ((_xbegin ()) == _XBEGIN_STARTED) { int flag=1; void *ptr; ptr = &&foo; //foo? e ptr tbm fica indicando como não declarado
 #    define TM_END()                      if(flag==1) { flag=0; _xend(); } else { do{ THREAD_MUTEX_UNLOCK(global_lock); }while(0); } } else { do{ THREAD_MUTEX_LOCK(global_lock); }while(0); goto *ptr; }
 #elif defined(FALLBACK_2)
-#    define TM_BEGIN()                    if ((status = _xbegin ()) == _XBEGIN_STARTED) { void function(){
-#    define TM_END()                      } _xend (); } else { do{ THREAD_MUTEX_LOCK(global_lock); }while(0); function(); do{ THREAD_MUTEX_UNLOCK(global_lock); }while(0); }
+#    define TM_BEGIN()                    if ((_xbegin ()) == _XBEGIN_STARTED) { void function(){
+//                                                                        \/essa definição de global_lock quase certeza que vai dar problema, é só pra tentar ver quai outros erros aparecem e se ele ao menos compila
+#    define TM_END()                      } _xend (); } else { THREAD_MUTEX_T global_lock; do{ THREAD_MUTEX_LOCK(global_lock); }while(0); function(); do{ THREAD_MUTEX_UNLOCK(global_lock); }while(0); }
 #endif
 #    define TM_BEGIN_ID(id)               TM_BEGIN()      //if ((status = _xbegin ()) == _XBEGIN_STARTED) {
 #    define TM_BEGIN_RO()                 TM_BEGIN()      //if ((status = _xbegin ()) == _XBEGIN_STARTED) {

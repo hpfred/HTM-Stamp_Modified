@@ -1,6 +1,6 @@
 # ==============================================================================
 #
-# Makefile.rtme_intel
+# Makefile.rtm_intel
 #
 # ==============================================================================
 # Copyright (c) IBM Corp. 2014, and others.
@@ -12,10 +12,10 @@ CFLAGS += -mrtm		# x86_64 GCC
 
 # Somente pra testar os fallbacks, remover depois
 CFLAGS += -DFALLBACK_0
-#CFLAGS += -DFALLBACK_1
-#CFLAGS += -DFALLBACK_2
+#CFLAGS += -DFALLBACK_1 -DUSE_MUTEX -DGLOBAL_LOCK
+#CFLAGS += -DFALLBACK_2 -DUSE_MUTEX -DGLOBAL_LOCK
 
-SRCS += $(LIB)/rtm_intel.c
+#SRCS += $(LIB)/rtm_intel.c
 
 OBJS := ${SRCS:.c=.o}
 
@@ -42,7 +42,7 @@ PROGRAM := ./$(PROG).rtm_intel
 
 # ==============================================================================
 #
-# Makefile.seq
+# Makefile.rtm_intel
 #
 # ==============================================================================
 
