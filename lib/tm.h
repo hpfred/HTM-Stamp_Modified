@@ -435,8 +435,8 @@ tm_end ## id:
 #elif defined(RTM_INTEL)
 //#include "rtm_intel.h"
 #include <immintrin.h>
-//#include <stdlib.h>   //Include pra usar mutex(?)
-//#include "thread.h"   //Include pra usar mutex(?)
+//#include <stdlib.h>   //Include pra usar mutex
+//#include "thread.h"   //Include pra usar mutex
 
 #  define TM_ARG                        /* nothing */
 #  define TM_ARG_ALONE                  /* nothing */
@@ -453,9 +453,9 @@ tm_end ## id:
 #ifdef USE_TLH
 #include "thread.h"
 #include "memory.h"
-#    define P_MALLOC(size)              memory_get(thread_getId(), size)    // Esse não sei se é válido em RTM
+#    define P_MALLOC(size)              memory_get(thread_getId(), size)
 #    define P_FREE(ptr)                 /* TODO: thread local free is non-trivial */
-#    define TM_MALLOC(size)             memory_get(thread_getId(), size)    // Esse não sei se é válido em RTM
+#    define TM_MALLOC(size)             memory_get(thread_getId(), size)
 #    define TM_FREE(ptr)                /* TODO: thread local free is non-trivial */
 #else /* !USE_TLH */
 #    define P_MALLOC(size)              malloc(size)
@@ -465,13 +465,13 @@ tm_end ## id:
 #endif /* !USE_TLH */
 
 #    define TM_BEGIN()                    if ((status = _xbegin ()) == _XBEGIN_STARTED) {
-                                          //if ((status = _xbegin ()) == _XBEGIN_STARTED) { flag=1; void *ptr; ptr = &&foo;
-                                          //if ((status = _xbegin ()) == _XBEGIN_STARTED) { void function(){
+//#    define TM_BEGIN()                    if ((status = _xbegin ()) == _XBEGIN_STARTED) { flag=1; void *ptr; ptr = &&foo;
+//#    define TM_BEGIN()                    if ((status = _xbegin ()) == _XBEGIN_STARTED) { void function(){
 #    define TM_BEGIN_ID(id)               TM_BEGIN()      //if ((status = _xbegin ()) == _XBEGIN_STARTED) {
 #    define TM_BEGIN_RO()                 TM_BEGIN()      //if ((status = _xbegin ()) == _XBEGIN_STARTED) {
 #    define TM_END()                      _xend (); } //else { FALLBACK }
-                                          //if(flag==1) { flag=0; _xend(); } else { do{ THREAD_MUTEX_UNLOCK(global_lock); }while(0); } } else { do{ THREAD_MUTEX_LOCK(global_lock); }while(0); goto *ptr; }
-                                          //} _xend (); } else { do{ THREAD_MUTEX_LOCK(global_lock); }while(0); function(); do{ THREAD_MUTEX_UNLOCK(global_lock); }while(0); }
+//#    define TM_END()                      if(flag==1) { flag=0; _xend(); } else { do{ THREAD_MUTEX_UNLOCK(global_lock); }while(0); } } else { do{ THREAD_MUTEX_LOCK(global_lock); }while(0); goto *ptr; }
+//#    define TM_END()                      } _xend (); } else { do{ THREAD_MUTEX_LOCK(global_lock); }while(0); function(); do{ THREAD_MUTEX_UNLOCK(global_lock); }while(0); }
 #    define TM_END_ID(id)                 TM_END()        //_xend (); } else { FALLBACK }
 #    define TM_RESTART()                  _xabort(0)      //_xabort()   //XABORT recebe um parâmetro imm8 com os bits de EAX
 #    define TM_EARLY_RELEASE(var)         /* nothing */
@@ -479,41 +479,18 @@ tm_end ## id:
 /// Copiando o sequencial pra ver como a biblioteca lida com mutex e outras alternativas bloqueantes
 /// Estou cogitando deixar só com mutex, e ver se funciona pra n ficar com um trecho de código monumental
 // #ifdef USE_MUTEX
-// #  define TM_BEGIN()			     \
-//   do {					     \
-//     THREAD_MUTEX_LOCK(global_lock);	     \
-//   } while (0)
-// #  define TM_END()			     \
-//   do {					     \
-//     THREAD_MUTEX_UNLOCK(global_lock);	     \
-//   } while (0)
+// #  define TM_BEGIN()     do{ THREAD_MUTEX_LOCK(global_lock); }while(0)
+// #  define TM_END()       do{ THREAD_MUTEX_UNLOCK(global_lock);	}while(0)
 // #else /* ! USE_MUTEX */
-// #include "mfence.h"
-// #if defined(__370__)
-// #  define TM_BEGIN()						\
-//   do {								\
-//   cs_t local_value = 0; cs_t new_value = 1;			\
-//   while (cs(&local_value, (cs_t *)&global_lock, new_value)) {	\
-//     while (local_value = global_lock)				\
-//       ;								\
-//   }								\
-//   } while (0)
-// #elif defined(__GNUC__) || defined(__IBMC__)
-// #  define TM_BEGIN()						\
-//   do {								\
-//     while (__sync_val_compare_and_swap(&global_lock, 0, 1)) {	\
-//       while (global_lock)					\
-// 	;							\
-//     }								\
-//   } while (0)
-// #else
-// #error
-// #endif
-// #  define TM_END()			     \
-//   do {					     \
-//     memory_fence();			     \
-//     global_lock = 0;			     \
-//   } while (0)
+// #  include "mfence.h"
+// #  if defined(__370__)
+// #    define TM_BEGIN()   do{ cs_t local_value = 0; cs_t new_value = 1; while(cs(&local_value, (cs_t *)&global_lock, new_value)){ TM_BEGIN() while (local_value = global_lock); } }while(0)
+// #  elif defined(__GNUC__) || defined(__IBMC__)
+// #    define TM_BEGIN()   do{ while(__sync_val_compare_and_swap(&global_lock, 0, 1)){ while(global_lock); } }while(0)
+// #  else
+// #    error
+// #  endif
+// #  define TM_END()       do{ memory_fence(); global_lock = 0; }while(0)
 // #endif /* USE_MUTEX */
 /// Fim do trecho de código sequencial
 
