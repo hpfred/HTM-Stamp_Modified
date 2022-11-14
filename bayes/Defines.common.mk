@@ -13,6 +13,7 @@ SRCS += \
 	adtree.c \
 	bayes.c \
 	data.c \
+	$(LIB)/thread.c \
 	learner.c \
 	net.c \
 	sort.c \
@@ -21,7 +22,6 @@ SRCS += \
 	$(LIB)/mt19937ar.c \
 	$(LIB)/queue.c \
 	$(LIB)/random.c \
-	$(LIB)/thread.c \
 	$(LIB)/vector.c \
 	$(LIB)/memory.c
 #

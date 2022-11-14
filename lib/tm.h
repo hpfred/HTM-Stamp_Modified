@@ -467,23 +467,25 @@ tm_end ## id:
 
 //É interessante depois melhorar esse código com coisas como impressão do numero de commits e aborts, versão com lock sem mutex, e outras coisas assim que são dadas em alguns outros códigos
 #if defined(GLOBAL_LOCK)
+//THREAD_MUTEX_T global_lock;
+extern THREAD_MUTEX_T global_lock;
 #include <stdlib.h>
 #include "thread.h"
 
-#ifdef FALLBACK_1
-//Esses do{}while(0) são a forma correta de se fazer uma macro multi declaração, porém tenho que ver se nesse caso ela não possa causar algum problema no código
-#    define TM_BEGIN()                    do{ int tries = 1; int status = _xbegin(); if ((status = _xbegin ()) == _XBEGIN_STARTED){ break; }else{ tries--; THREAD_MUTEX_LOCK(global_lock); } }while(0)
-#    define TM_END()                      do{ if(tries > 0){ _xend(); }else{ THREAD_MUTEX_UNLOCK(global_lock); } }while(0)
-#elif defined(FALLBACK_2)
-#    define HTM_RETRIES                   4 
-#    define TM_BEGIN()                    do{ int tries = HTM_RETRIES; while(1){ int status = _xbegin(); if ((status = _xbegin ()) == _XBEGIN_STARTED){ if(THREAD_MUTEX_TRYLOCK(global_lock) == -1){ THREAD_MUTEX_UNLOCK(global_lock); _xabort(30); } break; }else{ tries--; if(tries <= 0){ THREAD_MUTEX_LOCK(global_lock); break; } } }}while(0)
-#    define TM_END()                      do{ if(tries > 0){ _xend(); }else{ THREAD_MUTEX_UNLOCK(global_lock); } }while(0)
-#endif
+  #ifdef FALLBACK_1
+  #    define TM_BEGIN()                    { int tries = 1; int status = _xbegin(); if ((status = _xbegin ()) == _XBEGIN_STARTED){ if(THREAD_MUTEX_TRYLOCK(global_lock) == -1){ THREAD_MUTEX_UNLOCK(global_lock); _xabort(30); } }else{ tries--; THREAD_MUTEX_LOCK(global_lock); }
+  #    define TM_END()                      if(tries > 0){ _xend(); }else{ THREAD_MUTEX_UNLOCK(global_lock); } }
+  #elif defined(FALLBACK_2)
+  #    define HTM_RETRIES                   4 
+  #    define TM_BEGIN()                    { int tries = HTM_RETRIES; while(1){ int status = _xbegin(); if ((status = _xbegin ()) == _XBEGIN_STARTED){ if(THREAD_MUTEX_TRYLOCK(global_lock) == -1){ THREAD_MUTEX_UNLOCK(global_lock); _xabort(30); } break; }else{ tries--; if(tries <= 0){ THREAD_MUTEX_LOCK(global_lock); break; } } }
+  #    define TM_END()                      if(tries > 0){ _xend(); }else{ THREAD_MUTEX_UNLOCK(global_lock); } }
+  #endif
 //O caso sem global lock é utilizado para testar o funcionamento apropriado da TSX (não estar abortando sempre)
 #else
   #ifdef FALLBACK_1
-  #    define TM_BEGIN()                    do{ int aborts; if ((_xbegin ()) == _XBEGIN_STARTED) { printf("Entrou\n"); break; }else{ aborts++; } }while(1)
-  #    define TM_END()                      do{ _xend (); printf("Saiu com %d aborts\n"); }while(0)
+  #    define TM_BEGIN()                    { int aborts=0, cap=0, conf=0; do{ unsigned int status = _xbegin(); if (status == _XBEGIN_STARTED) { printf("Entrou\nAborts: %d\nCausa - Tamanho: %d  Conflito: %d\n",aborts,cap,conf); break; }else{ if(status == _XABORT_CAPACITY){ cap++; }else if(status == _XABORT_CONFLICT){ conf++; }  if(status == _XABORT_RETRY){ printf("--Nao funciona retry--\n"); } aborts++; }}while(1)
+  //#    define TM_BEGIN()                    { int aborts=0, enter=0, cap=0, conf=0; do{ printf("Tenta - Entrou: %d  Aborts: %d\nCausas - Capacidade: %d  Conflito: %d\n",enter,aborts,cap,conf); unsigned int status = _xbegin(); if (status == _XBEGIN_STARTED) { printf("Entrou\n"); break; }else{ if(status == _XABORT_CAPACITY){ cap++; }  if(status == _XABORT_RETRY){ printf("--Nao funciona retry--\n"); } aborts++; }}while(1)
+  #    define TM_END()                      _xend (); printf("Saiu com %d aborts\n",aborts); };
   #else
   #    define TM_BEGIN()                    if ((_xbegin ()) == _XBEGIN_STARTED) { printf("Entrou\n")
   #    define TM_END()                      _xend (); printf("Saiu\n"); } else { printf("Fallback\n"); }
