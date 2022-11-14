@@ -481,8 +481,13 @@ tm_end ## id:
 #endif
 //O caso sem global lock é utilizado para testar o funcionamento apropriado da TSX (não estar abortando sempre)
 #else
-#    define TM_BEGIN()                    if ((_xbegin ()) == _XBEGIN_STARTED) { printf("Entrou\n")
-#    define TM_END()                      _xend (); printf("Saiu\n"); } else { printf("Fallback\n"); }
+  #ifdef FALLBACK_1
+  #    define TM_BEGIN()                    do{ int aborts; if ((_xbegin ()) == _XBEGIN_STARTED) { printf("Entrou\n"); break; }else{ aborts++; } }while(1)
+  #    define TM_END()                      do{ _xend (); printf("Saiu com %d aborts\n"); }while(0)
+  #else
+  #    define TM_BEGIN()                    if ((_xbegin ()) == _XBEGIN_STARTED) { printf("Entrou\n")
+  #    define TM_END()                      _xend (); printf("Saiu\n"); } else { printf("Fallback\n"); }
+  #endif
 #endif
 
 #    define TM_BEGIN_ID(id)               TM_BEGIN()
