@@ -6,6 +6,7 @@
         "initializer_list": "c",
         "utility": "c",
         "memory.h": "c",
-        "thread.h": "c"
+        "thread.h": "c",
+        "htm_util.h": "c"
     }
 }

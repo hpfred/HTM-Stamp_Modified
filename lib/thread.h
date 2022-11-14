@@ -104,6 +104,7 @@ extern "C" {
 #define THREAD_MUTEX_INIT(lock)             pthread_mutex_init(&(lock), NULL)
 #define THREAD_MUTEX_LOCK(lock)             pthread_mutex_lock(&(lock))
 #define THREAD_MUTEX_UNLOCK(lock)           pthread_mutex_unlock(&(lock))
+#define THREAD_MUTEX_TRYLOCK(lock)           pthread_mutex_trylock(&(lock))
 
 #define THREAD_COND_T                       pthread_cond_t
 #define THREAD_COND_INIT(cond)              pthread_cond_init(&(cond), NULL)
