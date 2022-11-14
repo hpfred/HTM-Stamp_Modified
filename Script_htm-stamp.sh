@@ -12,6 +12,11 @@ listaBenchs=(
             "vacation"
             "yada"
             )
+listaExecs=(
+            "rtm_intel"
+            "seq"
+            "stm"
+            )
 numExecs=30; #30;
 ##----------------------------------
 
@@ -23,19 +28,29 @@ then
 fi;
 
 SECONDS=0
+data = "$(date +"%Y_%m_%d_%I_%M_%p")"
 
+#for execs in ${listaExecs[*]}
+#do
 for benchs in ${listaBenchs[*]}
 do
     cd $benchs;
 
     make -f Makefile.rtm_intel clean;
     make -f Makefile.rtm_intel default;
+    #eval make -f Makefile.$execs clean;
+    #eval make -f Makefile.$execs default;
 
-    echo >  ../Results/"$benchs"_1.txt;
+#Vou ter que ver como vou fazer com a data, pq ela vai ir mudando ao longo da execução, o que é um problema
+    #echo >  ../Results/"$benchs"_1-"$execs"-"$(date +"%Y_%m_%d_%I_%M_%p")".txt;
+    #echo >  ../Results/"$benchs"_1-"$(date +"%Y_%m_%d_%I_%M_%p")".txt;
+    echo >  ../Results/"$benchs"_1-"$data".txt;
 
     if [[ "$benchs" = "kmeans" || "$benchs" = "vacation" ]]
     then
-        echo >  ../Results/"$benchs"_2.txt;
+        #echo >  ../Results/"$benchs"_2-"$execs"-"$(date +"%Y_%m_%d_%I_%M_%p")".txt;
+        #echo >  ../Results/"$benchs"_2-"$(date +"%Y_%m_%d_%I_%M_%p")".txt;
+        echo >  ../Results/"$benchs"_2-"$data".txt;
     fi;
 
     ##Se arquivos de input estiverem como gunzip ele irá descompactar
@@ -52,7 +67,10 @@ do
 
     cd ../
 done;
+#done;
 
+#for execs in ${listaExecs[*]}
+#do
 for i in $(seq 1 $numExecs)
 do
     
@@ -95,21 +113,31 @@ do
         fi;
 
         #./"$benchs".rtm_intel $params >> ../Results/"$benchs"_1.txt #"$benchs"_1.txt
-        eval "./"$benchs".rtm_intel $params" >> ../Results/"$benchs"_1.txt #"$benchs"_1.txt
-        echo "end_of_execution" >> ../Results/"$benchs"_1.txt
-        echo "$i - $benchs" >> ../Results/"$benchs"_1.txt
-        times >> ../Results/"$benchs"_1.txt
-        echo -e "\n\n" >> ../Results/"$benchs"_1.txt
+        #eval "./"$benchs".rtm_intel $params" >> ../Results/"$benchs"_1.txt #"$benchs"_1.txt
+        eval "./"$benchs".rtm_intel $params" >> ../Results/"$benchs"_1-"$data".txt;
+        #echo "end_of_execution" >> ../Results/"$benchs"_1.txt
+        echo "end_of_execution" >> ../Results/"$benchs"_1-"$data".txt;
+        #echo "$i - $benchs" >> ../Results/"$benchs"_1.txt
+        echo "$i - $benchs" >> ../Results/"$benchs"_1-"$data".txt;
+        #times >> ../Results/"$benchs"_1.txt
+        times >> ../Results/"$benchs"_1-"$data".txt;
+        #echo -e "\n\n" >> ../Results/"$benchs"_1.txt
+        echo -e "\n\n" >> ../Results/"$benchs"_1-"$data".txt;
         echo "$i - $benchs"
         times
 
         if [[ -n $params2 ]]
         then
-            eval "./"$benchs".rtm_intel $params2" >> ../Results/"$benchs"_2.txt
-            echo "end_of_execution" >> ../Results/"$benchs"_2.txt
-            echo "$i - $benchs" >> ../Results/"$benchs"_2.txt
-            times >> ../Results/"$benchs"_2.txt
-            echo -e "\n\n" >> ../Results/"$benchs"_2.txt
+            #eval "./"$benchs".rtm_intel $params2" >> ../Results/"$benchs"_2.txt
+            eval "./"$benchs".rtm_intel $params2" >> ../Results/"$benchs"_2-"$data".txt
+            #echo "end_of_execution" >> ../Results/"$benchs"_2.txt
+            echo "end_of_execution" >> ../Results/"$benchs"_2-"$data".txt
+            #echo "$i - $benchs" >> ../Results/"$benchs"_2.txt
+            echo "$i - $benchs" >> ../Results/"$benchs"_2-"$data".txt
+            #times >> ../Results/"$benchs"_2.txt
+            times >> ../Results/"$benchs"_2-"$data".txt
+            #echo -e "\n\n" >> ../Results/"$benchs"_2.txt
+            echo -e "\n\n" >> ../Results/"$benchs"_2-"$data".txt
             echo "$i - $benchs"
             times
         fi;
@@ -118,6 +146,7 @@ do
     done;
 
 done;
+#done;
 
 echo -e "\n\n"
 echo "Tempo Final: $((($SECONDS / 60) % 60))min $(($SECONDS % 60))sec"

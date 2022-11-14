@@ -10,9 +10,10 @@ CFLAGS += -mrtm		# x86_64 GCC
 # CFLAGS += -mhtm		# PPC GCC
 #LDFLAGS += -static
 
-# Somente pra testar os fallbacks, remover depois
-CFLAGS += -DFALLBACK_0
+#Para testar o fallback não adicionar nenhuma dessas flags
+#Para executar fallback com uma única tentativa adicionar a flag abaixo
 #CFLAGS += -DFALLBACK_1 -DUSE_MUTEX -DGLOBAL_LOCK
+#Para executar fallback com uma multiplas tentativa adicionar a flag abaixo
 #CFLAGS += -DFALLBACK_2 -DUSE_MUTEX -DGLOBAL_LOCK
 
 #SRCS += $(LIB)/rtm_intel.c
