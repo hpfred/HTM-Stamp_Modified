@@ -473,12 +473,12 @@ extern THREAD_MUTEX_T global_lock;
 #include "thread.h"
 
   #ifdef FALLBACK_1
-  #    define TM_BEGIN()                    { int tries = 1; int status = _xbegin(); if ((status = _xbegin ()) == _XBEGIN_STARTED){ if(THREAD_MUTEX_TRYLOCK(global_lock) == -1){ THREAD_MUTEX_UNLOCK(global_lock); _xabort(30); } }else{ tries--; THREAD_MUTEX_LOCK(global_lock); }
-  #    define TM_END()                      if(tries > 0){ _xend(); }else{ THREAD_MUTEX_UNLOCK(global_lock); } }
+  #    define TM_BEGIN()                    { int tries = 1; int execs=1, aborts=0; int status = _xbegin(); if ((status = _xbegin ()) == _XBEGIN_STARTED){ printf("Entrou\n"); if(THREAD_MUTEX_TRYLOCK(global_lock) == 0){ THREAD_MUTEX_UNLOCK(global_lock); break; }else{ _xabort(30); } } }else{ tries--; aborts++; THREAD_MUTEX_LOCK(global_lock); }
+  #    define TM_END()                      if(tries > 0){ _xend(); printf("Commitou transacionalmente\n"); }else{ THREAD_MUTEX_UNLOCK(global_lock); } printf("Resultados:\nExecuções: %d  Aborts: %d\n",execs,aborts); }
   #elif defined(FALLBACK_2)
-  #    define HTM_RETRIES                   4 
-  #    define TM_BEGIN()                    { int tries = HTM_RETRIES; while(1){ int status = _xbegin(); if ((status = _xbegin ()) == _XBEGIN_STARTED){ if(THREAD_MUTEX_TRYLOCK(global_lock) == -1){ THREAD_MUTEX_UNLOCK(global_lock); _xabort(30); } break; }else{ tries--; if(tries <= 0){ THREAD_MUTEX_LOCK(global_lock); break; } } }
-  #    define TM_END()                      if(tries > 0){ _xend(); }else{ THREAD_MUTEX_UNLOCK(global_lock); } }
+  #    define HTM_RETRIES                   5000
+  #    define TM_BEGIN()                    { int tries = HTM_RETRIES; int execs = 0, aborts = 0; while(1){ execs++; int status = _xbegin(); if ((status = _xbegin ()) == _XBEGIN_STARTED){ printf("Entrou\n"); if(THREAD_MUTEX_TRYLOCK(global_lock) == 0){ THREAD_MUTEX_UNLOCK(global_lock); break; }else{ _xabort(30); } }else{ tries--; aborts++; if(tries <= 0){ THREAD_MUTEX_LOCK(global_lock); break; } } }
+  #    define TM_END()                      if(tries > 0){ _xend(); printf("Commitou transacionalmente\n"); }else{ THREAD_MUTEX_UNLOCK(global_lock); } printf("Resultados:\nExecuções: %d  Aborts: %d\n",execs,aborts); }
   #endif
 //O caso sem global lock é utilizado para testar o funcionamento apropriado da TSX (não estar abortando sempre)
 #else

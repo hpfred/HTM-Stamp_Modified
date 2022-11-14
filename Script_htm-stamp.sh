@@ -3,13 +3,13 @@
 
 ##Define caracteristicas da execução
 listaBenchs=(
-            "bayes"
-            "genome"
-            "intruder"
-            "kmeans"
-            "labyrinth"
-            "ssca2"
-            "vacation"
+            #"bayes"
+            #"genome"
+            #"intruder"
+            #"kmeans"
+            #"labyrinth"
+            #"ssca2"
+            #"vacation"
             "yada"
             )
 listaExecs=(
@@ -17,7 +17,7 @@ listaExecs=(
             "seq"
             "stm"
             )
-numExecs=30; #30;
+numExecs=1; #30;
 ##----------------------------------
 
 # cd htm-stamp/;
@@ -28,7 +28,11 @@ then
 fi;
 
 SECONDS=0
-data = "$(date +"%Y_%m_%d_%I_%M_%p")"
+data=$(date +%d%m%g_%s)
+echo "$data"
+sleep 5s
+echo "$data"
+exit
 
 #for execs in ${listaExecs[*]}
 #do
