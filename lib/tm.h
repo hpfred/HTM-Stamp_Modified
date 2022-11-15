@@ -474,7 +474,8 @@ extern THREAD_MUTEX_T global_lock;
 
   #ifdef FALLBACK_1
   #    define TM_BEGIN()                    { int tries = 1; int execs=1, aborts=0; int status = _xbegin(); if ((status = _xbegin ()) == _XBEGIN_STARTED){ printf("Entrou\n"); if(THREAD_MUTEX_TRYLOCK(global_lock) == 0){ THREAD_MUTEX_UNLOCK(global_lock); break; }else{ _xabort(30); } } }else{ tries--; aborts++; THREAD_MUTEX_LOCK(global_lock); }
-  #    define TM_END()                      if(tries > 0){ _xend(); printf("Commitou transacionalmente\n"); }else{ THREAD_MUTEX_UNLOCK(global_lock); } printf("Resultados:\nExecuções: %d  Aborts: %d\n",execs,aborts); }
+  //#    define TM_END()                      if(tries > 0){ _xend(); printf("Commitou transacionalmente\n"); }else{ THREAD_MUTEX_UNLOCK(global_lock); } printf("Resultados:\nExecuções: %d  Aborts: %d\n",execs,aborts); }
+  #    define TM_END()                      if(tries > 0){ _xend(); printf("Commitou transacionalmente\n"); }else{ THREAD_MUTEX_UNLOCK(global_lock); } }
   #elif defined(FALLBACK_2)
   #    define HTM_RETRIES                   50
   #    define TM_BEGIN()                    { int tries = HTM_RETRIES; int execs = 0, aborts = 0; while(1){ execs++; int status = _xbegin(); if ((status = _xbegin ()) == _XBEGIN_STARTED){ printf("Entrou\n"); if(THREAD_MUTEX_TRYLOCK(global_lock) == 0){ THREAD_MUTEX_UNLOCK(global_lock); break; }else{ _xabort(30); } }else{ tries--; aborts++; if(tries <= 0){ THREAD_MUTEX_LOCK(global_lock); break; } } }

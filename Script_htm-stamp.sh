@@ -14,13 +14,26 @@ listaBenchs=(
             )
 listaExecs=(
             "rtm_intel"
-            "seq"
-            #"stm"      #stm tá quebrando pq ele tenta usar uma biblioteca <stm.h> que não sei daonde ele tirou que existe
+            #"seq"
+            "stm"      #stm tá quebrando pq ele tenta usar uma biblioteca <stm.h> que não sei daonde ele tirou que existe
             )
+stmTypes=(
+          "tinystm"
+          #"swisstm"
+          #"tl2"
+          #"norec"
+          )
 numExecs=30; #30;
 ##----------------------------------
 
-# cd htm-stamp/;
+#Somente fazer uma STM por vez, precisa modificar mais coisas pra fazer mais de uma STM
+for stms in ${stmTypes[*]}
+do
+    #limpa a compilação de todas stms
+    #compila a stm em questão
+
+    #o /commom/Makefile.stm tem "STM := " que precisa ser modificado com a STM escolhida
+done
 
 if [ ! -d $PWD/Results ]
 then
