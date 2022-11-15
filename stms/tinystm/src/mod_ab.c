@@ -35,7 +35,7 @@
 #include "mod_ab.h"
 
 #include "atomic.h"
-#include "stm_tinystm.h"
+#include "stm.h"//#include "stm_tinystm.h"
 #include "utils.h"
 
 /* ################################################################### *

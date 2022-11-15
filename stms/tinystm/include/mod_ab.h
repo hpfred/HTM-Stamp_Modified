@@ -39,7 +39,7 @@
 #ifndef _MOD_AB_H_
 # define _MOD_AB_H_
 
-# include "stm_tinystm.h"
+
 
 # ifdef __cplusplus
 extern "C" {

@@ -41,7 +41,7 @@
 #ifndef _MOD_STATS_H_
 # define _MOD_STATS_H_
 
-# include "stm_tinystm.h"
+# include "stm.h"//# include "stm_tinystm.h"
 
 # ifdef __cplusplus
 extern "C" {

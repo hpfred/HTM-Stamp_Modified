@@ -33,7 +33,7 @@
 #include "gc.h"
 
 #include "atomic.h"
-#include "stm_tinystm.h"
+#include "stm.h"//#include "stm_tinystm.h"
 
 /* TODO: could be made much more efficient by allocating large chunks. */
 

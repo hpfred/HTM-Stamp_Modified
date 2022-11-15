@@ -25,7 +25,7 @@
 
 #include "mod_print.h"
 
-#include "stm_tinystm.h"
+#include "stm.h"//#include "stm_tinystm.h"
 
 /*
  * Called upon thread creation.

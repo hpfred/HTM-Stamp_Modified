@@ -36,7 +36,7 @@
 #include "libitm.h"
 #include "utils.h"
 
-#include "stm_tinystm.h"
+#include "stm.h"//#include "stm_tinystm.h"
 #include "atomic.h"
 #include "mod_cb.h"
 #include "mod_mem.h"

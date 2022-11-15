@@ -30,7 +30,7 @@
 
 #include "mod_log.h"
 
-#include "stm_tinystm.h"
+#include "stm.h"//#include "stm_tinystm.h"
 #include "utils.h"
 
 #ifndef LW_SET_SIZE

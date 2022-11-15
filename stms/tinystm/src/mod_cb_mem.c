@@ -31,7 +31,7 @@
 #include "mod_mem.h"
 
 /* TODO use stm_internal.h for faster accesses */
-#include "stm_tinystm.h"
+#include "stm.h"//#include "stm_tinystm.h"
 #include "utils.h"
 #include "gc.h"
 

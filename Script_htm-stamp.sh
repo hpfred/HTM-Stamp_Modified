@@ -26,15 +26,6 @@ stmTypes=(
 numExecs=30; #30;
 ##----------------------------------
 
-#Somente fazer uma STM por vez, precisa modificar mais coisas pra fazer mais de uma STM
-for stms in ${stmTypes[*]}
-do
-    #limpa a compilação de todas stms
-    #compila a stm em questão
-
-    #o /commom/Makefile.stm tem "STM := " que precisa ser modificado com a STM escolhida
-done
-
 if [ ! -d $PWD/Results ]
 then
     mkdir Results
@@ -46,18 +37,36 @@ data=$(date +%d%m%g_%s)
 
 for execs in ${listaExecs[*]}
 do
+    execType=$(execs)
+    #Somente fazer uma STM por vez, precisa modificar mais coisas pra fazer mais de uma STM
+    if [[ "$execs" = "stm" ]]
+    then
+        for stms in ${stmTypes[*]}
+        do
+            #limpa a compilação de todas stms
+            #compila a stm em questão
+            cd stms/$stms
+            make clean
+            make
+            cd ../../
+
+            #o /commom/Makefile.stm tem "STM := " que precisa ser modificado com a STM escolhida
+            execType="$execs:$stms"
+        done;
+    fi;
+
     for benchs in ${listaBenchs[*]}
     do
         cd $benchs;
         
         eval make -f Makefile.$execs clean;
         eval make -f Makefile.$execs default;
-
-        echo >  ../Results/"$benchs"_1-"$execs"-"$data".txt;
+        
+        echo >  ../Results/"$benchs"_1-"$execType"-"$data".txt;
 
         if [[ "$benchs" = "kmeans" || "$benchs" = "vacation" ]]
         then
-            echo >  ../Results/"$benchs"_2-"$execs"-"$data".txt;
+            echo >  ../Results/"$benchs"_2-"$execType"-"$data".txt;
         fi;
 
         ##Se arquivos de input estiverem como gunzip ele irá descompactar
@@ -75,6 +84,9 @@ do
         cd ../
     done;
 done;
+
+#Para aqui pra testar
+exit
 
 for execs in ${listaExecs[*]}
 do
@@ -120,22 +132,22 @@ do
             fi;
 
             #./"$benchs".rtm_intel $params >> ../Results/"$benchs"_1.txt #"$benchs"_1.txt
-            eval "./"$benchs"."$execs" $params" >> ../Results/"$benchs"_1-"$execs"-"$data".txt;
-            echo "end_of_execution" >> ../Results/"$benchs"_1-"$execs"-"$data".txt;
-            echo "$i - $benchs - $execs" >> ../Results/"$benchs"_1-"$execs"-"$data".txt;
-            times >> ../Results/"$benchs"_1-"$execs"-"$data".txt;
-            echo -e "\n\n" >> ../Results/"$benchs"_1-"$execs"-"$data".txt;
-            echo "$i - $benchs - $execs"
+            eval "./"$benchs"."$execs" $params" >> ../Results/"$benchs"_1-"$execType"-"$data".txt;
+            echo "end_of_execution" >> ../Results/"$benchs"_1-"$execType"-"$data".txt;
+            echo "$i - $benchs - $execType" >> ../Results/"$benchs"_1-"$execType"-"$data".txt;
+            times >> ../Results/"$benchs"_1-"$execType"-"$data".txt;
+            echo -e "\n\n" >> ../Results/"$benchs"_1-"$execType"-"$data".txt;
+            echo "$i - $benchs - $execType"
             times
 
             if [[ -n $params2 ]]
             then
-                eval "./"$benchs"."$execs" $params2" >> ../Results/"$benchs"_2-"$execs"-"$data".txt
-                echo "end_of_execution" >> ../Results/"$benchs"_2-"$execs"-"$data".txt
-                echo "$i - $benchs - $execs" >> ../Results/"$benchs"_2-"$execs"-"$data".txt
-                times >> ../Results/"$benchs"_2-"$execs"-"$data".txt
-                echo -e "\n\n" >> ../Results/"$benchs"_2-"$execs"-"$data".txt
-                echo "$i - $benchs - $execs"
+                eval "./"$benchs"."$execs" $params2" >> ../Results/"$benchs"_2-"$execType"-"$data".txt
+                echo "end_of_execution" >> ../Results/"$benchs"_2-"$execType"-"$data".txt
+                echo "$i - $benchs - $execType" >> ../Results/"$benchs"_2-"$execType"-"$data".txt
+                times >> ../Results/"$benchs"_2-"$execType"-"$data".txt
+                echo -e "\n\n" >> ../Results/"$benchs"_2-"$execType"-"$data".txt
+                echo "$i - $benchs - $execType"
                 times
             fi;
             

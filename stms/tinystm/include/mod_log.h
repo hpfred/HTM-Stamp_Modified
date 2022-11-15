@@ -39,7 +39,7 @@
 #ifndef _MOD_LOG_H_
 # define _MOD_LOG_H_
 
-# include "stm_tinystm.h"
+# include "stm.h"//# include "stm_tinystm.h"
 
 # ifdef __cplusplus
 extern "C" {
