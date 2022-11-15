@@ -14,10 +14,10 @@ listaBenchs=(
             )
 listaExecs=(
             "rtm_intel"
-            #"seq"
-            #"stm"
+            "seq"
+            #"stm"      #stm tá quebrando pq ele tenta usar uma biblioteca <stm.h> que não sei daonde ele tirou que existe
             )
-numExecs=1; #30;
+numExecs=30; #30;
 ##----------------------------------
 
 # cd htm-stamp/;
@@ -61,7 +61,7 @@ do
         cd ../
     done;
 done;
-exit
+
 for execs in ${listaExecs[*]}
 do
     for i in $(seq 1 $numExecs)
