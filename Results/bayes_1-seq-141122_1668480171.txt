@@ -1,0 +1,661 @@
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.877612
+Learning structure...done.
+Learn time = 2.342784
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+1 - bayes - seq
+0m0,192s 0m0,200s
+256m3,501s 1m1,614s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.903256
+Learning structure...done.
+Learn time = 2.338326
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+2 - bayes - seq
+0m0,199s 0m0,203s
+258m54,837s 1m2,523s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.888029
+Learning structure...done.
+Learn time = 2.332054
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+3 - bayes - seq
+0m0,204s 0m0,209s
+261m45,727s 1m3,416s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.921677
+Learning structure...done.
+Learn time = 2.338519
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+4 - bayes - seq
+0m0,215s 0m0,210s
+264m36,534s 1m4,301s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.923137
+Learning structure...done.
+Learn time = 2.340148
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+5 - bayes - seq
+0m0,221s 0m0,216s
+267m28,132s 1m5,299s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.919721
+Learning structure...done.
+Learn time = 2.343187
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+6 - bayes - seq
+0m0,223s 0m0,225s
+270m19,511s 1m6,182s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.921237
+Learning structure...done.
+Learn time = 2.367247
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+7 - bayes - seq
+0m0,227s 0m0,232s
+273m10,607s 1m7,074s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.908019
+Learning structure...done.
+Learn time = 2.343019
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+8 - bayes - seq
+0m0,237s 0m0,233s
+276m1,711s 1m8,115s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.922458
+Learning structure...done.
+Learn time = 2.340907
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+9 - bayes - seq
+0m0,241s 0m0,241s
+278m53,395s 1m9,051s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.914201
+Learning structure...done.
+Learn time = 2.343797
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+10 - bayes - seq
+0m0,248s 0m0,244s
+281m45,136s 1m9,939s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.929101
+Learning structure...done.
+Learn time = 2.345792
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+11 - bayes - seq
+0m0,251s 0m0,251s
+284m37,140s 1m10,880s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.916104
+Learning structure...done.
+Learn time = 2.343048
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+12 - bayes - seq
+0m0,255s 0m0,259s
+287m28,500s 1m11,809s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.885521
+Learning structure...done.
+Learn time = 2.336488
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+13 - bayes - seq
+0m0,258s 0m0,267s
+290m20,028s 1m12,729s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.895671
+Learning structure...done.
+Learn time = 2.337563
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+14 - bayes - seq
+0m0,269s 0m0,268s
+293m11,107s 1m13,621s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.921474
+Learning structure...done.
+Learn time = 2.337878
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+15 - bayes - seq
+0m0,277s 0m0,273s
+296m2,246s 1m14,489s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.893365
+Learning structure...done.
+Learn time = 2.345598
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+16 - bayes - seq
+0m0,281s 0m0,281s
+298m53,433s 1m15,353s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.964327
+Learning structure...done.
+Learn time = 2.343150
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+17 - bayes - seq
+0m0,289s 0m0,283s
+301m44,582s 1m16,242s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.897529
+Learning structure...done.
+Learn time = 2.349139
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+18 - bayes - seq
+0m0,293s 0m0,288s
+304m35,888s 1m17,202s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.903766
+Learning structure...done.
+Learn time = 2.346077
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+19 - bayes - seq
+0m0,296s 0m0,296s
+307m27,172s 1m18,010s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.904669
+Learning structure...done.
+Learn time = 2.345235
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+20 - bayes - seq
+0m0,297s 0m0,306s
+310m18,948s 1m18,942s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.924191
+Learning structure...done.
+Learn time = 2.345291
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+21 - bayes - seq
+0m0,304s 0m0,309s
+313m10,454s 1m19,747s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.935957
+Learning structure...done.
+Learn time = 2.345137
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+22 - bayes - seq
+0m0,309s 0m0,315s
+316m6,508s 1m20,670s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.902322
+Learning structure...done.
+Learn time = 2.358446
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+23 - bayes - seq
+0m0,318s 0m0,318s
+318m57,902s 1m21,612s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.933351
+Learning structure...done.
+Learn time = 2.343260
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+24 - bayes - seq
+0m0,325s 0m0,324s
+321m49,888s 1m22,447s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.923294
+Learning structure...done.
+Learn time = 2.340859
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+25 - bayes - seq
+0m0,331s 0m0,329s
+324m41,084s 1m23,371s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.939260
+Learning structure...done.
+Learn time = 2.343496
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+26 - bayes - seq
+0m0,340s 0m0,331s
+327m37,383s 1m24,372s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.893183
+Learning structure...done.
+Learn time = 2.343554
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+27 - bayes - seq
+0m0,346s 0m0,337s
+330m28,582s 1m25,320s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.925186
+Learning structure...done.
+Learn time = 2.351828
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+28 - bayes - seq
+0m0,351s 0m0,342s
+333m20,020s 1m26,189s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.924735
+Learning structure...done.
+Learn time = 2.342493
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+29 - bayes - seq
+0m0,361s 0m0,342s
+336m11,427s 1m27,181s
+
+
+
+Random seed                = 1
+Number of vars             = 32
+Number of records          = 4096
+Max num parents            = 10
+% chance of parent         = 14
+Insert penalty             = 2
+Max num edge learned / var = 8
+Operation quality factor   = 1.000000
+Generating data... done.
+Generating adtree... done.
+Adtree time = 8.902985
+Learning structure...done.
+Learn time = 2.342672
+Learn score  = -64499.203125
+Actual score = -64470.691406
+end_of_execution
+30 - bayes - seq
+0m0,369s 0m0,345s
+339m2,694s 1m28,073s
+
+
+

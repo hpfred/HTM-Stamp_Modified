@@ -1,0 +1,451 @@
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.315293
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+1 - genome - seq
+0m0,192s 0m0,201s
+256m8,194s 1m1,926s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.298175
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+2 - genome - seq
+0m0,201s 0m0,203s
+258m59,544s 1m2,799s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.315636
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+3 - genome - seq
+0m0,205s 0m0,210s
+261m50,470s 1m3,676s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.304920
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+4 - genome - seq
+0m0,216s 0m0,210s
+264m41,254s 1m4,573s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.319189
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+5 - genome - seq
+0m0,221s 0m0,216s
+267m32,883s 1m5,551s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.302681
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+6 - genome - seq
+0m0,223s 0m0,226s
+270m24,258s 1m6,422s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.303586
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+7 - genome - seq
+0m0,228s 0m0,232s
+273m15,291s 1m7,382s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.317071
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+8 - genome - seq
+0m0,238s 0m0,233s
+276m6,412s 1m8,419s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.322449
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+9 - genome - seq
+0m0,242s 0m0,241s
+278m58,113s 1m9,335s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.295384
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+10 - genome - seq
+0m0,248s 0m0,246s
+281m49,833s 1m10,227s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.309378
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+11 - genome - seq
+0m0,252s 0m0,252s
+284m41,870s 1m11,140s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.298678
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+12 - genome - seq
+0m0,255s 0m0,260s
+287m33,184s 1m12,114s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.299346
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+13 - genome - seq
+0m0,259s 0m0,267s
+290m24,725s 1m13,022s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.292326
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+14 - genome - seq
+0m0,270s 0m0,268s
+293m15,819s 1m13,885s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.270245
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+15 - genome - seq
+0m0,278s 0m0,273s
+296m6,943s 1m14,749s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.260529
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+16 - genome - seq
+0m0,281s 0m0,281s
+298m58,124s 1m15,609s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.275218
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+17 - genome - seq
+0m0,291s 0m0,283s
+301m49,267s 1m16,510s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.303732
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+18 - genome - seq
+0m0,293s 0m0,289s
+304m40,616s 1m17,462s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.372083
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+19 - genome - seq
+0m0,296s 0m0,297s
+307m31,975s 1m18,270s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.267793
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+20 - genome - seq
+0m0,297s 0m0,307s
+310m23,681s 1m19,162s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.275858
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+21 - genome - seq
+0m0,304s 0m0,310s
+313m15,194s 1m19,991s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.276241
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+22 - genome - seq
+0m0,310s 0m0,315s
+316m11,220s 1m20,918s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.277834
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+23 - genome - seq
+0m0,319s 0m0,319s
+319m2,609s 1m21,867s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.273494
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+24 - genome - seq
+0m0,325s 0m0,325s
+321m54,583s 1m22,703s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.282868
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+25 - genome - seq
+0m0,332s 0m0,329s
+324m45,779s 1m23,647s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.278989
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+26 - genome - seq
+0m0,340s 0m0,332s
+327m42,088s 1m24,632s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.278026
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+27 - genome - seq
+0m0,347s 0m0,337s
+330m33,286s 1m25,572s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.274337
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+28 - genome - seq
+0m0,352s 0m0,342s
+333m24,716s 1m26,453s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.268768
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+29 - genome - seq
+0m0,362s 0m0,342s
+336m16,082s 1m27,481s
+
+
+
+Creating gene and segments... done.
+Gene length     = 16384
+Segment length  = 64
+Number segments = 8486974
+Sequencing gene... done.
+Time = 4.313386
+Sequence matches gene: yes
+Deallocating memory... done.
+end_of_execution
+30 - genome - seq
+0m0,369s 0m0,346s
+339m7,440s 1m28,345s
+
+
+

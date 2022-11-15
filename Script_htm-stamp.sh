@@ -28,6 +28,7 @@ then
 fi;
 
 SECONDS=0
+start=`date +%s`
 data=$(date +%d%m%g_%s)
 
 for execs in ${listaExecs[*]}
@@ -130,6 +131,10 @@ do
 
     done;
 done;
+end=`date +%s`
+runtime=$((end-start))
 
 echo -e "\n\n"
-echo "Tempo Final: $((($SECONDS / 60) % 60))min $(($SECONDS % 60))sec"
+echo "Tempo Final: $((($SECONDS / 60 /60) % 60))h $((($SECONDS / 60) % 60))min $(($SECONDS % 60))sec"
+echo -e "\n"
+echo "Tempo Final: $((($runtime / 60 /60) % 60))h $((($runtime / 60) % 60))min $(($runtime % 60))sec"

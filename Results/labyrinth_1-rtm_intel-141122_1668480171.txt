@@ -1,0 +1,361 @@
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 90.996453 seconds
+Verification passed.
+end_of_execution
+1 - labyrinth - rtm_intel
+0m0,009s 0m0,030s
+7m1,348s 0m6,141s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 90.822432 seconds
+Verification passed.
+end_of_execution
+2 - labyrinth - rtm_intel
+0m0,014s 0m0,037s
+15m35,626s 0m7,897s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 92.750299 seconds
+Verification passed.
+end_of_execution
+3 - labyrinth - rtm_intel
+0m0,016s 0m0,048s
+24m7,785s 0m9,553s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 90.808332 seconds
+Verification passed.
+end_of_execution
+4 - labyrinth - rtm_intel
+0m0,022s 0m0,054s
+32m37,732s 0m11,376s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 91.104058 seconds
+Verification passed.
+end_of_execution
+5 - labyrinth - rtm_intel
+0m0,025s 0m0,063s
+41m7,608s 0m13,196s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 95.653995 seconds
+Verification passed.
+end_of_execution
+6 - labyrinth - rtm_intel
+0m0,025s 0m0,072s
+50m0,300s 0m15,064s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 90.651857 seconds
+Verification passed.
+end_of_execution
+7 - labyrinth - rtm_intel
+0m0,033s 0m0,076s
+58m36,496s 0m16,908s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 90.644146 seconds
+Verification passed.
+end_of_execution
+8 - labyrinth - rtm_intel
+0m0,036s 0m0,084s
+67m5,868s 0m18,788s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 91.044890 seconds
+Verification passed.
+end_of_execution
+9 - labyrinth - rtm_intel
+0m0,042s 0m0,090s
+75m35,601s 0m20,700s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 90.620863 seconds
+Verification passed.
+end_of_execution
+10 - labyrinth - rtm_intel
+0m0,052s 0m0,092s
+84m5,318s 0m22,664s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 91.033927 seconds
+Verification passed.
+end_of_execution
+11 - labyrinth - rtm_intel
+0m0,062s 0m0,093s
+92m34,490s 0m24,580s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 91.069776 seconds
+Verification passed.
+end_of_execution
+12 - labyrinth - rtm_intel
+0m0,069s 0m0,098s
+101m4,793s 0m26,444s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 90.801624 seconds
+Verification passed.
+end_of_execution
+13 - labyrinth - rtm_intel
+0m0,076s 0m0,104s
+109m35,097s 0m28,328s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 90.998438 seconds
+Verification passed.
+end_of_execution
+14 - labyrinth - rtm_intel
+0m0,082s 0m0,110s
+118m4,545s 0m30,148s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 90.749511 seconds
+Verification passed.
+end_of_execution
+15 - labyrinth - rtm_intel
+0m0,083s 0m0,121s
+126m34,184s 0m31,928s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 90.671378 seconds
+Verification passed.
+end_of_execution
+16 - labyrinth - rtm_intel
+0m0,083s 0m0,133s
+135m2,485s 0m33,688s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 90.568274 seconds
+Verification passed.
+end_of_execution
+17 - labyrinth - rtm_intel
+0m0,095s 0m0,134s
+143m31,310s 0m35,663s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 91.069149 seconds
+Verification passed.
+end_of_execution
+18 - labyrinth - rtm_intel
+0m0,105s 0m0,136s
+152m4,344s 0m37,543s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 90.956441 seconds
+Verification passed.
+end_of_execution
+19 - labyrinth - rtm_intel
+0m0,117s 0m0,136s
+160m36,674s 0m39,411s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 90.739562 seconds
+Verification passed.
+end_of_execution
+20 - labyrinth - rtm_intel
+0m0,128s 0m0,137s
+169m5,689s 0m41,387s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 90.816609 seconds
+Verification passed.
+end_of_execution
+21 - labyrinth - rtm_intel
+0m0,141s 0m0,137s
+177m35,386s 0m43,295s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 90.753919 seconds
+Verification passed.
+end_of_execution
+22 - labyrinth - rtm_intel
+0m0,147s 0m0,143s
+186m5,669s 0m45,319s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 90.822529 seconds
+Verification passed.
+end_of_execution
+23 - labyrinth - rtm_intel
+0m0,151s 0m0,150s
+194m34,552s 0m47,351s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 90.812701 seconds
+Verification passed.
+end_of_execution
+24 - labyrinth - rtm_intel
+0m0,151s 0m0,162s
+203m4,963s 0m49,123s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 90.323099 seconds
+Verification passed.
+end_of_execution
+25 - labyrinth - rtm_intel
+0m0,154s 0m0,171s
+211m33,920s 0m51,115s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 90.357810 seconds
+Verification passed.
+end_of_execution
+26 - labyrinth - rtm_intel
+0m0,158s 0m0,178s
+220m2,460s 0m53,031s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 90.591278 seconds
+Verification passed.
+end_of_execution
+27 - labyrinth - rtm_intel
+0m0,167s 0m0,182s
+228m31,186s 0m54,842s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 90.513923 seconds
+Verification passed.
+end_of_execution
+28 - labyrinth - rtm_intel
+0m0,169s 0m0,192s
+236m58,774s 0m56,662s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 90.831075 seconds
+Verification passed.
+end_of_execution
+29 - labyrinth - rtm_intel
+0m0,175s 0m0,198s
+245m29,964s 0m58,546s
+
+
+
+Maze dimensions = 512 x 512 x 7
+Paths to route  = 512
+Paths routed    = 512
+Elapsed time    = 90.646456 seconds
+Verification passed.
+end_of_execution
+30 - labyrinth - rtm_intel
+0m0,187s 0m0,198s
+254m2,015s 1m0,366s
+
+
+

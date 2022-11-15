@@ -1,0 +1,481 @@
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.146
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+1 - yada - seq
+0m0,198s 0m0,203s
+258m43,232s 1m2,231s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.147
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+2 - yada - seq
+0m0,204s 0m0,208s
+261m34,169s 1m3,104s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.145
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+3 - yada - seq
+0m0,213s 0m0,210s
+264m24,902s 1m4,017s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.146
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+4 - yada - seq
+0m0,220s 0m0,215s
+267m16,572s 1m4,939s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.146
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+5 - yada - seq
+0m0,223s 0m0,223s
+270m7,852s 1m5,926s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.146
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+6 - yada - seq
+0m0,227s 0m0,231s
+272m58,922s 1m6,818s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.146
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+7 - yada - seq
+0m0,236s 0m0,233s
+275m50,141s 1m7,779s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.145
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+8 - yada - seq
+0m0,241s 0m0,239s
+278m41,746s 1m8,779s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.147
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+9 - yada - seq
+0m0,248s 0m0,243s
+281m33,484s 1m9,675s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.146
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+10 - yada - seq
+0m0,251s 0m0,251s
+284m25,535s 1m10,556s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.147
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+11 - yada - seq
+0m0,254s 0m0,258s
+287m16,928s 1m11,466s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.146
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+12 - yada - seq
+0m0,257s 0m0,267s
+290m8,454s 1m12,425s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.145
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+13 - yada - seq
+0m0,268s 0m0,268s
+292m59,532s 1m13,313s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.146
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+14 - yada - seq
+0m0,277s 0m0,272s
+295m50,606s 1m14,217s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.146
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+15 - yada - seq
+0m0,279s 0m0,280s
+298m41,840s 1m15,053s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.146
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+16 - yada - seq
+0m0,288s 0m0,283s
+301m32,945s 1m15,922s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.146
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+17 - yada - seq
+0m0,293s 0m0,287s
+304m24,308s 1m16,882s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.146
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+18 - yada - seq
+0m0,296s 0m0,296s
+307m15,521s 1m17,758s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.146
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+19 - yada - seq
+0m0,296s 0m0,305s
+310m7,336s 1m18,650s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.146
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+20 - yada - seq
+0m0,303s 0m0,309s
+312m58,825s 1m19,455s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.146
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+21 - yada - seq
+0m0,308s 0m0,315s
+315m54,870s 1m20,374s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.147
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+22 - yada - seq
+0m0,318s 0m0,317s
+318m46,339s 1m21,260s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.145
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+23 - yada - seq
+0m0,325s 0m0,323s
+321m38,233s 1m22,171s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.146
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+24 - yada - seq
+0m0,330s 0m0,329s
+324m29,469s 1m23,067s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.146
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+25 - yada - seq
+0m0,339s 0m0,330s
+327m25,802s 1m24,016s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.146
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+26 - yada - seq
+0m0,344s 0m0,337s
+330m17,005s 1m25,008s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.147
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+27 - yada - seq
+0m0,351s 0m0,341s
+333m8,394s 1m25,885s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.146
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+28 - yada - seq
+0m0,360s 0m0,342s
+335m59,829s 1m26,861s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.146
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+29 - yada - seq
+0m0,369s 0m0,344s
+338m51,101s 1m27,769s
+
+
+
+Angle constraint = 15.000000
+Reading input... done.
+Initial number of mesh elements = 19998
+Initial number of bad elements  = 2931
+Starting triangulation... done.
+Elapsed time                    = 0.146
+Final mesh size                 = 30158
+Number of elements processed    = 5062
+Final mesh is valid.
+end_of_execution
+30 - yada - seq
+0m0,371s 0m0,354s
+341m42,553s 1m28,736s
+
+
+
