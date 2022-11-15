@@ -18,9 +18,9 @@ listaExecs=(
             "stm"      #stm tá quebrando pq ele tenta usar uma biblioteca <stm.h> que não sei daonde ele tirou que existe
             )
 stmTypes=(
-          "tinystm"
+          #"tinystm"
           #"swisstm"
-          #"tl2"
+          "tl2"
           #"norec"
           )
 numExecs=30; #30;

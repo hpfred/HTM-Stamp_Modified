@@ -645,6 +645,9 @@ extern THREAD_MUTEX_T global_lock;
 
 #  endif /* !OTM */
 
+#    define TM_BEGIN_ID(id)               TM_BEGIN()
+#    define TM_END_ID(id)                 TM_END()
+
 
 /* =============================================================================
  * Sequential execution
