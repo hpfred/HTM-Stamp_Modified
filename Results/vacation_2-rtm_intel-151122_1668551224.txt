@@ -1,0 +1,661 @@
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.106172
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+1 - vacation - rtm_intel
+0m0,005s 0m0,024s
+3m56,235s 0m5,069s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.108186
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+2 - vacation - rtm_intel
+0m0,008s 0m0,034s
+7m36,389s 0m6,797s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.214856
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+3 - vacation - rtm_intel
+0m0,015s 0m0,040s
+11m17,060s 0m8,617s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.099101
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+4 - vacation - rtm_intel
+0m0,017s 0m0,049s
+14m58,604s 0m10,365s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.106820
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+5 - vacation - rtm_intel
+0m0,021s 0m0,057s
+18m38,764s 0m12,021s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.149463
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+6 - vacation - rtm_intel
+0m0,026s 0m0,064s
+22m21,980s 0m13,661s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.051012
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+7 - vacation - rtm_intel
+0m0,031s 0m0,071s
+26m2,054s 0m15,269s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 7.997467
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+8 - vacation - rtm_intel
+0m0,036s 0m0,078s
+29m41,871s 0m16,825s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.017369
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+9 - vacation - rtm_intel
+0m0,041s 0m0,085s
+33m23,551s 0m18,445s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.112735
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+10 - vacation - rtm_intel
+0m0,043s 0m0,094s
+37m3,189s 0m20,193s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 7.973277
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+11 - vacation - rtm_intel
+0m0,048s 0m0,102s
+40m42,929s 0m21,829s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.010379
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+12 - vacation - rtm_intel
+0m0,054s 0m0,107s
+44m22,503s 0m23,425s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 7.996714
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+13 - vacation - rtm_intel
+0m0,061s 0m0,114s
+48m2,353s 0m25,077s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.020123
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+14 - vacation - rtm_intel
+0m0,067s 0m0,119s
+51m42,012s 0m26,729s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.012768
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+15 - vacation - rtm_intel
+0m0,068s 0m0,132s
+55m21,955s 0m28,457s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.051210
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+16 - vacation - rtm_intel
+0m0,075s 0m0,137s
+59m1,674s 0m30,193s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.021446
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+17 - vacation - rtm_intel
+0m0,080s 0m0,145s
+62m41,518s 0m31,821s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.025301
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+18 - vacation - rtm_intel
+0m0,082s 0m0,154s
+66m21,419s 0m33,541s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.025581
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+19 - vacation - rtm_intel
+0m0,087s 0m0,161s
+70m6,637s 0m35,153s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.043909
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+20 - vacation - rtm_intel
+0m0,095s 0m0,166s
+73m46,504s 0m36,820s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.001574
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+21 - vacation - rtm_intel
+0m0,102s 0m0,171s
+77m26,766s 0m38,484s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 7.985464
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+22 - vacation - rtm_intel
+0m0,107s 0m0,177s
+81m6,443s 0m40,212s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.019730
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+23 - vacation - rtm_intel
+0m0,114s 0m0,182s
+84m45,740s 0m41,928s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.015188
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+24 - vacation - rtm_intel
+0m0,119s 0m0,189s
+88m25,436s 0m43,628s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.072090
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+25 - vacation - rtm_intel
+0m0,119s 0m0,200s
+92m7,047s 0m45,324s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.208251
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+26 - vacation - rtm_intel
+0m0,128s 0m0,203s
+95m47,492s 0m46,979s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.004495
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+27 - vacation - rtm_intel
+0m0,135s 0m0,208s
+99m27,654s 0m48,739s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.208685
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+28 - vacation - rtm_intel
+0m0,139s 0m0,216s
+103m7,833s 0m50,411s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.198470
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+29 - vacation - rtm_intel
+0m0,144s 0m0,223s
+106m48,141s 0m51,979s
+
+
+
+Initializing manager... done.
+Initializing clients... done.
+    Transactions        = 2194304
+    Clients             = 1
+    Transactions/client = 2194304
+    Queries/transaction = 4
+    Relations           = 1048576
+    Query percent       = 60
+    Query range         = 629146
+    Percent user        = 90
+Running clients... 
+done.
+Time = 8.207202
+Checking tables... done.
+Deallocating memory... done.
+end_of_execution
+30 - vacation - rtm_intel
+0m0,147s 0m0,232s
+110m29,213s 0m53,643s
+
+
+

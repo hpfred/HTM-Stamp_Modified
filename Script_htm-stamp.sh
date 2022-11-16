@@ -15,7 +15,7 @@ listaBenchs=(
 listaExecs=(
             "rtm_intel"
             #"seq"
-            "stm"      #stm tá quebrando pq ele tenta usar uma biblioteca <stm.h> que não sei daonde ele tirou que existe
+            #"stm"      #stm tá quebrando pq ele tenta usar uma biblioteca <stm.h> que não sei daonde ele tirou que existe
             )
 stmTypes=(
           #"tinystm"
@@ -37,7 +37,7 @@ data=$(date +%d%m%g_%s)
 
 for execs in ${listaExecs[*]}
 do
-    execType=$(execs)
+    execType=$execs
     #Somente fazer uma STM por vez, precisa modificar mais coisas pra fazer mais de uma STM
     if [[ "$execs" = "stm" ]]
     then
@@ -86,7 +86,7 @@ do
 done;
 
 #Para aqui pra testar
-exit
+#exit
 
 for execs in ${listaExecs[*]}
 do
