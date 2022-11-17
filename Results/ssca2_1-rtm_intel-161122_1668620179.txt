@@ -1,0 +1,288 @@
+
+
+HPCS SSCA #2 Graph Analysis Executable Specification:
+Running...
+
+
+Number of processors:       1
+Problem Scale:              18
+Max parallel edges:         3
+Percent int weights:        0.600000
+Probability unidirectional: 1.000000
+Probability inter-clique:   1.000000
+Subgraph edge length:       3
+Kernel 3 data structure:    2
+
+
+Scalable Data Generator - genScalData() beginning execution...
+Finished generating edges
+No. of intra-clique edges - 5478084
+No. of inter-clique edges - 222700
+Total no. of edges        - 5700784
+
+Time taken for Scalable Data Generation is  2.758171 sec.
+
+
+	genScalData() completed execution.
+
+Kernel 1 - computeGraph() beginning execution...
+
+	computeGraph() completed execution.
+
+Time taken for kernel 1 is 404.071536 sec.
+
+Time taken for all is 406.829707 sec.
+
+end_of_execution
+1 - ssca2 - rtm_intel
+0m0,009s 0m0,018s
+48m11,794s 0m4,352s
+
+
+
+
+HPCS SSCA #2 Graph Analysis Executable Specification:
+Running...
+
+
+Number of processors:       1
+Problem Scale:              18
+Max parallel edges:         3
+Percent int weights:        0.600000
+Probability unidirectional: 1.000000
+Probability inter-clique:   1.000000
+Subgraph edge length:       3
+Kernel 3 data structure:    2
+
+
+Scalable Data Generator - genScalData() beginning execution...
+Finished generating edges
+No. of intra-clique edges - 5478084
+No. of inter-clique edges - 222700
+Total no. of edges        - 5700784
+
+Time taken for Scalable Data Generation is  2.743517 sec.
+
+
+	genScalData() completed execution.
+
+Kernel 1 - computeGraph() beginning execution...
+
+	computeGraph() completed execution.
+
+Time taken for kernel 1 is 404.533307 sec.
+
+Time taken for all is 407.276824 sec.
+
+end_of_execution
+2 - ssca2 - rtm_intel
+0m0,018s 0m0,021s
+101m47,919s 0m6,128s
+
+
+
+
+HPCS SSCA #2 Graph Analysis Executable Specification:
+Running...
+
+
+Number of processors:       1
+Problem Scale:              18
+Max parallel edges:         3
+Percent int weights:        0.600000
+Probability unidirectional: 1.000000
+Probability inter-clique:   1.000000
+Subgraph edge length:       3
+Kernel 3 data structure:    2
+
+
+Scalable Data Generator - genScalData() beginning execution...
+Finished generating edges
+No. of intra-clique edges - 5478084
+No. of inter-clique edges - 222700
+Total no. of edges        - 5700784
+
+Time taken for Scalable Data Generation is  2.746885 sec.
+
+
+	genScalData() completed execution.
+
+Kernel 1 - computeGraph() beginning execution...
+
+	computeGraph() completed execution.
+
+Time taken for kernel 1 is 405.484876 sec.
+
+Time taken for all is 408.231761 sec.
+
+end_of_execution
+3 - ssca2 - rtm_intel
+0m0,026s 0m0,026s
+156m10,375s 0m7,928s
+
+
+
+
+HPCS SSCA #2 Graph Analysis Executable Specification:
+Running...
+
+
+Number of processors:       1
+Problem Scale:              18
+Max parallel edges:         3
+Percent int weights:        0.600000
+Probability unidirectional: 1.000000
+Probability inter-clique:   1.000000
+Subgraph edge length:       3
+Kernel 3 data structure:    2
+
+
+Scalable Data Generator - genScalData() beginning execution...
+Finished generating edges
+No. of intra-clique edges - 5478084
+No. of inter-clique edges - 222700
+Total no. of edges        - 5700784
+
+Time taken for Scalable Data Generation is  2.750537 sec.
+
+
+	genScalData() completed execution.
+
+Kernel 1 - computeGraph() beginning execution...
+
+	computeGraph() completed execution.
+
+Time taken for kernel 1 is 403.754150 sec.
+
+Time taken for all is 406.504687 sec.
+
+end_of_execution
+4 - ssca2 - rtm_intel
+0m0,035s 0m0,028s
+209m41,677s 0m9,620s
+
+
+
+
+HPCS SSCA #2 Graph Analysis Executable Specification:
+Running...
+
+
+Number of processors:       1
+Problem Scale:              18
+Max parallel edges:         3
+Percent int weights:        0.600000
+Probability unidirectional: 1.000000
+Probability inter-clique:   1.000000
+Subgraph edge length:       3
+Kernel 3 data structure:    2
+
+
+Scalable Data Generator - genScalData() beginning execution...
+Finished generating edges
+No. of intra-clique edges - 5478084
+No. of inter-clique edges - 222700
+Total no. of edges        - 5700784
+
+Time taken for Scalable Data Generation is  2.756990 sec.
+
+
+	genScalData() completed execution.
+
+Kernel 1 - computeGraph() beginning execution...
+
+	computeGraph() completed execution.
+
+Time taken for kernel 1 is 403.649088 sec.
+
+Time taken for all is 406.406078 sec.
+
+end_of_execution
+5 - ssca2 - rtm_intel
+0m0,043s 0m0,031s
+263m17,805s 0m11,576s
+
+
+
+
+HPCS SSCA #2 Graph Analysis Executable Specification:
+Running...
+
+
+Number of processors:       1
+Problem Scale:              18
+Max parallel edges:         3
+Percent int weights:        0.600000
+Probability unidirectional: 1.000000
+Probability inter-clique:   1.000000
+Subgraph edge length:       3
+Kernel 3 data structure:    2
+
+
+Scalable Data Generator - genScalData() beginning execution...
+Finished generating edges
+No. of intra-clique edges - 5478084
+No. of inter-clique edges - 222700
+Total no. of edges        - 5700784
+
+Time taken for Scalable Data Generation is  2.758774 sec.
+
+
+	genScalData() completed execution.
+
+Kernel 1 - computeGraph() beginning execution...
+
+	computeGraph() completed execution.
+
+Time taken for kernel 1 is 403.132884 sec.
+
+Time taken for all is 405.891658 sec.
+
+end_of_execution
+6 - ssca2 - rtm_intel
+0m0,047s 0m0,039s
+317m9,667s 0m13,420s
+
+
+
+
+HPCS SSCA #2 Graph Analysis Executable Specification:
+Running...
+
+
+Number of processors:       1
+Problem Scale:              18
+Max parallel edges:         3
+Percent int weights:        0.600000
+Probability unidirectional: 1.000000
+Probability inter-clique:   1.000000
+Subgraph edge length:       3
+Kernel 3 data structure:    2
+
+
+Scalable Data Generator - genScalData() beginning execution...
+Finished generating edges
+No. of intra-clique edges - 5478084
+No. of inter-clique edges - 222700
+Total no. of edges        - 5700784
+
+Time taken for Scalable Data Generation is  2.757902 sec.
+
+
+	genScalData() completed execution.
+
+Kernel 1 - computeGraph() beginning execution...
+
+	computeGraph() completed execution.
+
+Time taken for kernel 1 is 403.010682 sec.
+
+Time taken for all is 405.768584 sec.
+
+end_of_execution
+7 - ssca2 - rtm_intel
+0m0,056s 0m0,042s
+371m7,443s 0m15,180s
+
+
+

@@ -51,7 +51,7 @@ do
             cd ../../
 
             #o /commom/Makefile.stm tem "STM := " que precisa ser modificado com a STM escolhida
-            execType="$execs:$stms"
+            execType="$execs+$stms"
         done;
     fi;
 

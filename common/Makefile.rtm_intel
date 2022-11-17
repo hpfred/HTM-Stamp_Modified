@@ -14,11 +14,11 @@ CFLAGS += -mrtm		# x86_64 GCC
 #CFLAGS += -DFALLBACK_1
 
 #Para executar fallback com uma única tentativa adicionar a flag abaixo
-CFLAGS += -DFALLBACK_1 -DGLOBAL_LOCK
+#CFLAGS += -DFALLBACK_1 -DGLOBAL_LOCK
 #CFLAGS += -DFALLBACK_1 -DUSE_MUTEX -DGLOBAL_LOCK
 
 #Para executar fallback com uma multiplas tentativa adicionar a flag abaixo
-#CFLAGS += -DFALLBACK_2 -DGLOBAL_LOCK
+CFLAGS += -DFALLBACK_2 -DGLOBAL_LOCK
 #CFLAGS += -DFALLBACK_2 -DUSE_MUTEX -DGLOBAL_LOCK
 
 #SRCS += $(LIB)/rtm_intel.c
