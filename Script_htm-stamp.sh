@@ -14,7 +14,7 @@ listaBenchs=(
             )
 listaExecs=(
             "rtm_intel"
-            #"seq"
+            "seq"
             #"stm"      #stm tá quebrando pq ele tenta usar uma biblioteca <stm.h> que não sei daonde ele tirou que existe
             )
 stmTypes=(
@@ -99,35 +99,106 @@ do
 
             if [ "$benchs" = "bayes" ]
             then
-                params="-v32 -r4096 -n10 -p14 -i2 -e8 -s1";
+                #sim runs params
+                #params="-v32 -r1024 -n2 -p20 -s0 -i2 -e2";
+                #params2="";
+                #non sim runs params
+                ##params="-v32 -r4096 -n10 -p14 -i2 -e8 -s1";
+                ##params2="";
+                #custom params
+                #params=''; #-t <number_of_threads>
+                params="-v32 -r4096 -n10 -p14 -i2 -e8 -s1 -t24";
                 params2="";
+
             elif [ "$benchs" = "genome" ]
             then
-                params="-g16384 -s64 -n8486974";
+                #sim runs params
+                #params="-g256 -s16 -n16384";
+                #non sim runs params
+                #params="-g16384 -s64 -n16777216";
+                #custom params
+                ##params="-g16384 -s64 -n8486974";
+                ##params2="";
+                #params=''; #-t <number_of_threads>
+                params="-g16384 -s64 -n16777216 -t24";
                 params2="";
+
             elif [ "$benchs" = "intruder" ]
             then
-                params="-a10 -l128 -n142144 -s1";
+                #sim runs params
+                #params="-a10 -l4 -n2038 -s1";
+                #non sim runs params
+                #params="-a10 -l128 -n262144 -s1";
+                #custom params
+                ##params="-a10 -l128 -n142144 -s1";
+                ##params2="";
+                #params=''; #-t <number_of_threads>
+                params="-a10 -l128 -n262144 -s1 -t24";
                 params2="";
+
             elif [ "$benchs" = "kmeans" ]
             then
-                params="-m40 -n40 -t0.00001 -i inputs/random-n65536-d32-c16.txt";
-                params2="-m15 -n15 -t0.00001 -i inputs/random-n65536-d32-c16.txt";
+                #sim runs params
+                #params="-m40 -n40 -t0.05 -i inputs/random2048-d16-c16.txt";
+                #params2="-m15 -n15 -t0.05 -i inputs/random2048-d16-c16.txt";
+                #non sim runs params
+                ##params="-m40 -n40 -t0.00001 -i inputs/random-n65536-d32-c16.txt";
+                ##params2="-m15 -n15 -t0.00001 -i inputs/random-n65536-d32-c16.txt";
+                #custom params
+                #params=''; #-p <number_of_threads>
+                params="-m40 -n40 -t0.00001 -i inputs/random-n65536-d32-c16.txt -p 24";
+                params2="-m15 -n15 -t0.00001 -i inputs/random-n65536-d32-c16.txt -p 24";
+            
             elif [ "$benchs" = "labyrinth" ]
             then
-                params="-i inputs/random-x512-y512-z7-n512.txt";
+                #sim runs params
+                #params="-i inputs/random-x32-y32-z3-n96.txt";
+                #non sim runs params
+                ##params="-i inputs/random-x512-y512-z7-n512.txt";
+                ##params2="";
+                #custom params
+                #params='';
+                params="-i inputs/random-x512-y512-z7-n512.txt -t24";
                 params2="";
+
             elif [ "$benchs" = "ssca2" ]
             then
-                params="-s18 -i1.0 -u1.0 -l3 -p3";
+                #sim runs params
+                #params="-s13 -i1.0 -u1.0 -l3 -p3";
+                #non sim runs params
+                #params="-s20 -i1.0 -u1.0 -l3 -p3";
+                #custom params
+                ##params="-s18 -i1.0 -u1.0 -l3 -p3";
+                ##params2="";
+                #params=''; #-t <number_of_threads>
+                params="-s20 -i1.0 -u1.0 -l3 -p3 -t24";
                 params2="";
+
             elif [ "$benchs" = "vacation" ]
             then
-                params="-n2 -q90 -u98 -r1048576 -t2194304";
-                params2="-n4 -q60 -u90 -r1048576 -t2194304";
+                #sim runs params
+                #params="-n2 -q90 -u98 -r16384 -t4096";
+                #params2="-n4 -q60 -u90 -r16384 -t4096";
+                #non sim runs params
+                #params="-n2 -q90 -u98 -r1048576 -t4194304";
+                #params2="-n4 -q60 -u90 -r1048576 -t4194304";
+                #custom params
+                ##params="-n2 -q90 -u98 -r1048576 -t2194304";
+                ##params2="-n4 -q60 -u90 -r1048576 -t2194304";
+                #params='';
+                params="-n2 -q90 -u98 -r1048576 -t4194304 -c24";
+                params2="-n4 -q60 -u90 -r1048576 -t4194304 -c24";
+
             elif [ "$benchs" = "yada" ]
             then
-                params="-a15 -i inputs/ttimeu10000.2";
+                #sim runs params
+                #params="-a20 -i inputs/633.2";
+                #non sim runs params
+                ##params="-a15 -i inputs/ttimeu10000.2";
+                ##params2="";
+                #custom params
+                #params=''; #-t <number_of_threads>
+                params="-a15 -i inputs/ttimeu10000.2 -t24";
                 params2="";
             fi;
 
