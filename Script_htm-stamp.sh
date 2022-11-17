@@ -14,7 +14,7 @@ listaBenchs=(
             )
 listaExecs=(
             "rtm_intel"
-            "seq"
+            #"seq"
             #"stm"      #stm tá quebrando pq ele tenta usar uma biblioteca <stm.h> que não sei daonde ele tirou que existe
             )
 stmTypes=(
@@ -211,6 +211,7 @@ do
             echo "$i - $benchs - $execType"
             times
 
+            #Acho que o erro com o Seq foi acabar entrando aqui pra todos? N sei
             if [[ -n $params2 ]]
             then
                 eval "./"$benchs"."$execs" $params2" >> ../Results/"$benchs"_2-"$execType"-"$data".txt

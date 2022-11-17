@@ -4,12 +4,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 100.756288 seconds
+Elapsed time    = 100.618528 seconds
 Num found       = 29395
 end_of_execution
-1 - intruder - seq
-0m0,016s 0m0,021s
-5m0,850s 3m28,270s
+1 - intruder - rtm_intel
+0m0,008s 0m0,015s
+4m59,104s 3m29,032s
 
 
 
@@ -18,12 +18,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 100.714919 seconds
+Elapsed time    = 101.980051 seconds
 Num found       = 29395
 end_of_execution
-2 - intruder - seq
-0m0,023s 0m0,025s
-19m9,247s 13m55,742s
+2 - intruder - rtm_intel
+0m0,017s 0m0,017s
+19m43,623s 14m9,385s
 
 
 
@@ -32,12 +32,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 101.298698 seconds
+Elapsed time    = 99.952435 seconds
 Num found       = 29395
 end_of_execution
-3 - intruder - seq
-0m0,029s 0m0,030s
-34m46,322s 24m43,950s
+3 - intruder - rtm_intel
+0m0,023s 0m0,023s
+34m53,470s 24m58,462s
 
 
 
@@ -46,12 +46,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 99.773153 seconds
+Elapsed time    = 99.964761 seconds
 Num found       = 29395
 end_of_execution
-4 - intruder - seq
-0m0,032s 0m0,037s
-49m35,970s 35m16,808s
+4 - intruder - rtm_intel
+0m0,026s 0m0,030s
+48m41,456s 35m27,885s
 
 
 
@@ -60,12 +60,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 100.880996 seconds
+Elapsed time    = 99.558000 seconds
 Num found       = 29395
 end_of_execution
-5 - intruder - seq
-0m0,036s 0m0,043s
-65m33,953s 46m16,090s
+5 - intruder - rtm_intel
+0m0,029s 0m0,039s
+62m41,319s 45m51,861s
 
 
 
@@ -74,12 +74,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 100.728141 seconds
+Elapsed time    = 100.629406 seconds
 Num found       = 29395
 end_of_execution
-6 - intruder - seq
-0m0,039s 0m0,050s
-80m13,643s 56m46,350s
+6 - intruder - rtm_intel
+0m0,033s 0m0,045s
+77m19,161s 56m28,093s
 
 
 
@@ -88,12 +88,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 101.216112 seconds
+Elapsed time    = 99.412014 seconds
 Num found       = 29395
 end_of_execution
-7 - intruder - seq
-0m0,046s 0m0,055s
-96m14,478s 67m35,045s
+7 - intruder - rtm_intel
+0m0,037s 0m0,052s
+91m16,639s 66m47,856s
 
 
 
@@ -102,12 +102,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 100.288606 seconds
+Elapsed time    = 100.023219 seconds
 Num found       = 29395
 end_of_execution
-8 - intruder - seq
-0m0,053s 0m0,059s
-110m30,783s 78m3,247s
+8 - intruder - rtm_intel
+0m0,040s 0m0,060s
+106m41,261s 77m32,881s
 
 
 
@@ -116,12 +116,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 100.675873 seconds
+Elapsed time    = 99.862580 seconds
 Num found       = 29395
 end_of_execution
-9 - intruder - seq
-0m0,060s 0m0,062s
-124m24,034s 88m29,736s
+9 - intruder - rtm_intel
+0m0,043s 0m0,068s
+120m14,811s 87m48,914s
 
 
 
@@ -130,12 +130,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 101.139846 seconds
+Elapsed time    = 99.984156 seconds
 Num found       = 29395
 end_of_execution
-10 - intruder - seq
-0m0,066s 0m0,068s
-139m6,172s 99m1,056s
+10 - intruder - rtm_intel
+0m0,049s 0m0,073s
+134m41,890s 98m20,562s
 
 
 
@@ -144,12 +144,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 99.388255 seconds
+Elapsed time    = 99.798614 seconds
 Num found       = 29395
 end_of_execution
-11 - intruder - seq
-0m0,071s 0m0,073s
-153m30,973s 109m30,198s
+11 - intruder - rtm_intel
+0m0,059s 0m0,074s
+148m54,837s 108m48,205s
 
 
 
@@ -158,12 +158,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 100.279981 seconds
+Elapsed time    = 99.544372 seconds
 Num found       = 29395
 end_of_execution
-12 - intruder - seq
-0m0,077s 0m0,077s
-168m0,069s 119m56,406s
+12 - intruder - rtm_intel
+0m0,069s 0m0,074s
+163m59,229s 119m29,817s
 
 
 
@@ -172,12 +172,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 101.746283 seconds
+Elapsed time    = 100.907051 seconds
 Num found       = 29395
 end_of_execution
-13 - intruder - seq
-0m0,081s 0m0,085s
-182m13,658s 130m20,599s
+13 - intruder - rtm_intel
+0m0,078s 0m0,076s
+178m28,159s 130m7,024s
 
 
 
@@ -186,12 +186,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 99.215719 seconds
+Elapsed time    = 99.729885 seconds
 Num found       = 29395
 end_of_execution
-14 - intruder - seq
-0m0,086s 0m0,091s
-196m7,161s 140m53,101s
+14 - intruder - rtm_intel
+0m0,079s 0m0,084s
+192m32,185s 140m42,674s
 
 
 
@@ -200,12 +200,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 100.387595 seconds
+Elapsed time    = 101.260796 seconds
 Num found       = 29395
 end_of_execution
-15 - intruder - seq
-0m0,093s 0m0,094s
-211m59,315s 151m48,544s
+15 - intruder - rtm_intel
+0m0,083s 0m0,091s
+208m1,101s 151m21,454s
 
 
 
@@ -214,12 +214,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 100.671622 seconds
+Elapsed time    = 100.092383 seconds
 Num found       = 29395
 end_of_execution
-16 - intruder - seq
-0m0,099s 0m0,099s
-226m18,112s 162m25,460s
+16 - intruder - rtm_intel
+0m0,086s 0m0,098s
+223m5,370s 162m4,959s
 
 
 
@@ -228,12 +228,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 102.541406 seconds
+Elapsed time    = 100.618936 seconds
 Num found       = 29395
 end_of_execution
-17 - intruder - seq
-0m0,111s 0m0,099s
-240m13,873s 172m40,868s
+17 - intruder - rtm_intel
+0m0,095s 0m0,100s
+237m26,060s 172m36,051s
 
 
 
@@ -242,12 +242,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 100.244609 seconds
+Elapsed time    = 96.783315 seconds
 Num found       = 29395
 end_of_execution
-18 - intruder - seq
-0m0,121s 0m0,099s
-254m31,738s 183m12,504s
+18 - intruder - rtm_intel
+0m0,096s 0m0,109s
+252m11,622s 183m8,547s
 
 
 
@@ -256,12 +256,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 100.792671 seconds
+Elapsed time    = 99.998706 seconds
 Num found       = 29395
 end_of_execution
-19 - intruder - seq
-0m0,124s 0m0,107s
-269m27,077s 193m53,387s
+19 - intruder - rtm_intel
+0m0,096s 0m0,120s
+266m33,338s 193m24,204s
 
 
 
@@ -270,12 +270,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 100.130482 seconds
+Elapsed time    = 101.051524 seconds
 Num found       = 29395
 end_of_execution
-20 - intruder - seq
-0m0,131s 0m0,111s
-283m23,300s 204m16,152s
+20 - intruder - rtm_intel
+0m0,100s 0m0,128s
+282m4,480s 204m27,777s
 
 
 
@@ -284,12 +284,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 100.448711 seconds
+Elapsed time    = 100.947121 seconds
 Num found       = 29395
 end_of_execution
-21 - intruder - seq
-0m0,133s 0m0,120s
-296m58,613s 214m32,979s
+21 - intruder - rtm_intel
+0m0,106s 0m0,134s
+296m52,020s 215m4,043s
 
 
 
@@ -298,12 +298,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 101.400012 seconds
+Elapsed time    = 101.513739 seconds
 Num found       = 29395
 end_of_execution
-22 - intruder - seq
-0m0,139s 0m0,125s
-311m56,328s 225m10,309s
+22 - intruder - rtm_intel
+0m0,110s 0m0,140s
+310m47,876s 225m19,041s
 
 
 
@@ -312,12 +312,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 98.893286 seconds
+Elapsed time    = 100.707459 seconds
 Num found       = 29395
 end_of_execution
-23 - intruder - seq
-0m0,141s 0m0,132s
-326m17,962s 235m37,719s
+23 - intruder - rtm_intel
+0m0,116s 0m0,146s
+326m31,547s 236m17,445s
 
 
 
@@ -326,12 +326,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 101.332574 seconds
+Elapsed time    = 100.208749 seconds
 Num found       = 29395
 end_of_execution
-24 - intruder - seq
-0m0,147s 0m0,137s
-341m16,830s 246m20,923s
+24 - intruder - rtm_intel
+0m0,122s 0m0,151s
+340m55,565s 246m42,901s
 
 
 
@@ -340,12 +340,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 100.339374 seconds
+Elapsed time    = 100.128492 seconds
 Num found       = 29395
 end_of_execution
-25 - intruder - seq
-0m0,151s 0m0,144s
-356m19,247s 257m4,289s
+25 - intruder - rtm_intel
+0m0,130s 0m0,154s
+356m28,103s 257m27,921s
 
 
 
@@ -354,12 +354,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 101.506084 seconds
+Elapsed time    = 101.090385 seconds
 Num found       = 29395
 end_of_execution
-26 - intruder - seq
-0m0,158s 0m0,148s
-372m4,973s 267m55,897s
+26 - intruder - rtm_intel
+0m0,139s 0m0,156s
+371m44,326s 268m7,976s
 
 
 
@@ -368,12 +368,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 100.431172 seconds
+Elapsed time    = 101.525847 seconds
 Num found       = 29395
 end_of_execution
-27 - intruder - seq
-0m0,169s 0m0,148s
-386m44,743s 278m29,938s
+27 - intruder - rtm_intel
+0m0,145s 0m0,160s
+386m12,741s 278m40,211s
 
 
 
@@ -382,12 +382,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 101.107349 seconds
+Elapsed time    = 100.249112 seconds
 Num found       = 29395
 end_of_execution
-28 - intruder - seq
-0m0,174s 0m0,154s
-402m8,284s 289m13,970s
+28 - intruder - rtm_intel
+0m0,154s 0m0,162s
+402m32,976s 289m42,157s
 
 
 
@@ -396,12 +396,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 100.287313 seconds
+Elapsed time    = 100.293099 seconds
 Num found       = 29395
 end_of_execution
-29 - intruder - seq
-0m0,179s 0m0,160s
-416m32,626s 299m41,145s
+29 - intruder - rtm_intel
+0m0,160s 0m0,167s
+417m4,698s 300m16,433s
 
 
 
@@ -410,68 +410,12 @@ Max data length = 128
 Num flow        = 262144
 Random seed     = 1
 Num attack      = 29395
-Elapsed time    = 101.153559 seconds
+Elapsed time    = 100.790819 seconds
 Num found       = 29395
 end_of_execution
-30 - intruder - seq
-0m0,181s 0m0,169s
-430m33,038s 309m55,877s
-
-
-
-end_of_execution
-1 - intruder - seq
-0m0,187s 0m0,175s
-444m2,679s 317m5,204s
-
-
-
-end_of_execution
-2 - intruder - seq
-0m0,189s 0m0,181s
-448m13,828s 317m6,719s
-
-
-
-end_of_execution
-3 - intruder - seq
-0m0,193s 0m0,185s
-452m24,659s 317m8,110s
-
-
-
-end_of_execution
-4 - intruder - seq
-0m0,197s 0m0,189s
-456m34,743s 317m9,385s
-
-
-
-end_of_execution
-5 - intruder - seq
-0m0,203s 0m0,191s
-460m44,427s 317m11,401s
-
-
-
-end_of_execution
-6 - intruder - seq
-0m0,209s 0m0,193s
-464m52,419s 317m12,861s
-
-
-
-end_of_execution
-7 - intruder - seq
-0m0,212s 0m0,199s
-469m0,522s 317m14,289s
-
-
-
-end_of_execution
-8 - intruder - seq
-0m0,214s 0m0,205s
-473m9,327s 317m15,840s
+30 - intruder - rtm_intel
+0m0,166s 0m0,172s
+432m9,662s 311m0,651s
 
 
 

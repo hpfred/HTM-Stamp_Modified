@@ -20,7 +20,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.698048 sec.
+Time taken for Scalable Data Generation is 14.736854 sec.
 
 
 	genScalData() completed execution.
@@ -29,14 +29,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.632451 sec.
+Time taken for kernel 1 is 17.568722 sec.
 
-Time taken for all is 32.330499 sec.
+Time taken for all is 32.305576 sec.
 
 end_of_execution
-1 - ssca2 - seq
-0m0,018s 0m0,023s
-12m18,356s 9m28,911s
+1 - ssca2 - rtm_intel
+0m0,011s 0m0,016s
+12m51,290s 9m42,884s
 
 
 
@@ -61,7 +61,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.741725 sec.
+Time taken for Scalable Data Generation is 14.796354 sec.
 
 
 	genScalData() completed execution.
@@ -70,14 +70,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.547910 sec.
+Time taken for kernel 1 is 17.824357 sec.
 
-Time taken for all is 32.289635 sec.
+Time taken for all is 32.620711 sec.
 
 end_of_execution
-2 - ssca2 - seq
-0m0,024s 0m0,029s
-27m55,442s 20m18,054s
+2 - ssca2 - rtm_intel
+0m0,020s 0m0,020s
+28m4,430s 20m31,800s
 
 
 
@@ -102,7 +102,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.718788 sec.
+Time taken for Scalable Data Generation is 14.779963 sec.
 
 
 	genScalData() completed execution.
@@ -111,14 +111,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.551108 sec.
+Time taken for kernel 1 is 18.401420 sec.
 
-Time taken for all is 32.269896 sec.
+Time taken for all is 33.181383 sec.
 
 end_of_execution
-3 - ssca2 - seq
-0m0,030s 0m0,032s
-42m41,649s 30m53,067s
+3 - ssca2 - rtm_intel
+0m0,025s 0m0,025s
+41m48,657s 31m4,351s
 
 
 
@@ -143,7 +143,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.694196 sec.
+Time taken for Scalable Data Generation is 14.737535 sec.
 
 
 	genScalData() completed execution.
@@ -152,14 +152,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.629413 sec.
+Time taken for kernel 1 is 17.540891 sec.
 
-Time taken for all is 32.323609 sec.
+Time taken for all is 32.278426 sec.
 
 end_of_execution
-4 - ssca2 - seq
-0m0,034s 0m0,040s
-58m40,867s 41m50,403s
+4 - ssca2 - rtm_intel
+0m0,028s 0m0,033s
+55m51,906s 41m26,093s
 
 
 
@@ -184,7 +184,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.712589 sec.
+Time taken for Scalable Data Generation is 14.760678 sec.
 
 
 	genScalData() completed execution.
@@ -193,14 +193,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.482860 sec.
+Time taken for kernel 1 is 18.008671 sec.
 
-Time taken for all is 32.195449 sec.
+Time taken for all is 32.769349 sec.
 
 end_of_execution
-5 - ssca2 - seq
-0m0,037s 0m0,046s
-73m23,290s 52m22,449s
+5 - ssca2 - rtm_intel
+0m0,031s 0m0,041s
+70m26,190s 52m4,073s
 
 
 
@@ -225,7 +225,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.741704 sec.
+Time taken for Scalable Data Generation is 14.853889 sec.
 
 
 	genScalData() completed execution.
@@ -234,14 +234,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.498069 sec.
+Time taken for kernel 1 is 17.563069 sec.
 
-Time taken for all is 32.239773 sec.
+Time taken for all is 32.416958 sec.
 
 end_of_execution
-6 - ssca2 - seq
-0m0,043s 0m0,051s
-89m17,394s 63m12,363s
+6 - ssca2 - rtm_intel
+0m0,034s 0m0,049s
+84m30,261s 62m24,659s
 
 
 
@@ -266,7 +266,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.754560 sec.
+Time taken for Scalable Data Generation is 14.793444 sec.
 
 
 	genScalData() completed execution.
@@ -275,14 +275,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.624808 sec.
+Time taken for kernel 1 is 17.673870 sec.
 
-Time taken for all is 32.379368 sec.
+Time taken for all is 32.467314 sec.
 
 end_of_execution
-7 - ssca2 - seq
-0m0,046s 0m0,059s
-103m39,117s 73m38,285s
+7 - ssca2 - rtm_intel
+0m0,038s 0m0,055s
+99m47,718s 73m9,494s
 
 
 
@@ -307,7 +307,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.637666 sec.
+Time taken for Scalable Data Generation is 14.796795 sec.
 
 
 	genScalData() completed execution.
@@ -316,14 +316,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.640256 sec.
+Time taken for kernel 1 is 17.606338 sec.
 
-Time taken for all is 32.277922 sec.
+Time taken for all is 32.403133 sec.
 
 end_of_execution
-8 - ssca2 - seq
-0m0,058s 0m0,059s
-117m29,198s 84m1,740s
+8 - ssca2 - rtm_intel
+0m0,041s 0m0,064s
+113m23,622s 83m23,971s
 
 
 
@@ -348,7 +348,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.683721 sec.
+Time taken for Scalable Data Generation is 14.821091 sec.
 
 
 	genScalData() completed execution.
@@ -357,14 +357,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.431699 sec.
+Time taken for kernel 1 is 17.591625 sec.
 
-Time taken for all is 32.115420 sec.
+Time taken for all is 32.412716 sec.
 
 end_of_execution
-9 - ssca2 - seq
-0m0,060s 0m0,067s
-132m12,010s 94m34,191s
+9 - ssca2 - rtm_intel
+0m0,045s 0m0,071s
+127m51,497s 93m55,176s
 
 
 
@@ -389,7 +389,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.812496 sec.
+Time taken for Scalable Data Generation is 14.803999 sec.
 
 
 	genScalData() completed execution.
@@ -398,14 +398,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.529202 sec.
+Time taken for kernel 1 is 17.567247 sec.
 
-Time taken for all is 32.341698 sec.
+Time taken for all is 32.371246 sec.
 
 end_of_execution
-10 - ssca2 - seq
-0m0,068s 0m0,069s
-146m40,721s 105m4,549s
+10 - ssca2 - rtm_intel
+0m0,053s 0m0,073s
+142m3,394s 104m20,844s
 
 
 
@@ -430,7 +430,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.749998 sec.
+Time taken for Scalable Data Generation is 14.792392 sec.
 
 
 	genScalData() completed execution.
@@ -439,14 +439,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.591456 sec.
+Time taken for kernel 1 is 17.560042 sec.
 
-Time taken for all is 32.341454 sec.
+Time taken for all is 32.352434 sec.
 
 end_of_execution
-11 - ssca2 - seq
-0m0,072s 0m0,076s
-161m3,812s 115m33,244s
+11 - ssca2 - rtm_intel
+0m0,063s 0m0,074s
+157m10,968s 115m5,379s
 
 
 
@@ -471,7 +471,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.738433 sec.
+Time taken for Scalable Data Generation is 14.761525 sec.
 
 
 	genScalData() completed execution.
@@ -480,14 +480,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.627988 sec.
+Time taken for kernel 1 is 17.718100 sec.
 
-Time taken for all is 32.366421 sec.
+Time taken for all is 32.479625 sec.
 
 end_of_execution
-12 - ssca2 - seq
-0m0,078s 0m0,081s
-175m18,751s 125m55,805s
+12 - ssca2 - rtm_intel
+0m0,073s 0m0,074s
+171m37,302s 125m41,127s
 
 
 
@@ -512,7 +512,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.657422 sec.
+Time taken for Scalable Data Generation is 14.785333 sec.
 
 
 	genScalData() completed execution.
@@ -521,14 +521,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 18.434445 sec.
+Time taken for kernel 1 is 18.033963 sec.
 
-Time taken for all is 33.091867 sec.
+Time taken for all is 32.819296 sec.
 
 end_of_execution
-13 - ssca2 - seq
-0m0,083s 0m0,087s
-189m20,350s 136m28,260s
+13 - ssca2 - rtm_intel
+0m0,078s 0m0,079s
+185m43,090s 136m16,987s
 
 
 
@@ -553,7 +553,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.649889 sec.
+Time taken for Scalable Data Generation is 14.765031 sec.
 
 
 	genScalData() completed execution.
@@ -562,14 +562,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.710382 sec.
+Time taken for kernel 1 is 17.156253 sec.
 
-Time taken for all is 32.360271 sec.
+Time taken for all is 31.921284 sec.
 
 end_of_execution
-14 - ssca2 - seq
-0m0,088s 0m0,093s
-205m10,848s 147m23,882s
+14 - ssca2 - rtm_intel
+0m0,081s 0m0,086s
+201m9,610s 146m56,521s
 
 
 
@@ -594,7 +594,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.736594 sec.
+Time taken for Scalable Data Generation is 14.809288 sec.
 
 
 	genScalData() completed execution.
@@ -603,14 +603,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.532356 sec.
+Time taken for kernel 1 is 17.647893 sec.
 
-Time taken for all is 32.268950 sec.
+Time taken for all is 32.457181 sec.
 
 end_of_execution
-15 - ssca2 - seq
-0m0,096s 0m0,096s
-219m26,218s 158m0,652s
+15 - ssca2 - rtm_intel
+0m0,083s 0m0,095s
+216m13,547s 157m38,656s
 
 
 
@@ -635,7 +635,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.699690 sec.
+Time taken for Scalable Data Generation is 14.780171 sec.
 
 
 	genScalData() completed execution.
@@ -644,14 +644,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.426956 sec.
+Time taken for kernel 1 is 17.664169 sec.
 
-Time taken for all is 32.126646 sec.
+Time taken for all is 32.444340 sec.
 
 end_of_execution
-16 - ssca2 - seq
-0m0,104s 0m0,099s
-233m18,012s 168m16,205s
+16 - ssca2 - rtm_intel
+0m0,088s 0m0,100s
+230m34,796s 168m12,198s
 
 
 
@@ -676,7 +676,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.726471 sec.
+Time taken for Scalable Data Generation is 14.764587 sec.
 
 
 	genScalData() completed execution.
@@ -685,14 +685,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.684674 sec.
+Time taken for kernel 1 is 17.494246 sec.
 
-Time taken for all is 32.411145 sec.
+Time taken for all is 32.258833 sec.
 
 end_of_execution
-17 - ssca2 - seq
-0m0,114s 0m0,099s
-247m42,797s 178m47,201s
+17 - ssca2 - rtm_intel
+0m0,096s 0m0,103s
+245m33,398s 178m49,354s
 
 
 
@@ -717,7 +717,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.748842 sec.
+Time taken for Scalable Data Generation is 15.232198 sec.
 
 
 	genScalData() completed execution.
@@ -726,14 +726,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.703933 sec.
+Time taken for kernel 1 is 18.027917 sec.
 
-Time taken for all is 32.452775 sec.
+Time taken for all is 33.260115 sec.
 
 end_of_execution
-18 - ssca2 - seq
-0m0,124s 0m0,100s
-262m34,410s 189m29,529s
+18 - ssca2 - rtm_intel
+0m0,096s 0m0,114s
+259m41,911s 189m0,605s
 
 
 
@@ -758,7 +758,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.780862 sec.
+Time taken for Scalable Data Generation is 14.668002 sec.
 
 
 	genScalData() completed execution.
@@ -767,14 +767,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.543623 sec.
+Time taken for kernel 1 is 18.391560 sec.
 
-Time taken for all is 32.324485 sec.
+Time taken for all is 33.059562 sec.
 
 end_of_execution
-19 - ssca2 - seq
-0m0,128s 0m0,107s
-276m32,613s 199m51,395s
+19 - ssca2 - rtm_intel
+0m0,096s 0m0,125s
+275m11,269s 200m0,685s
 
 
 
@@ -799,7 +799,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.734261 sec.
+Time taken for Scalable Data Generation is 14.750402 sec.
 
 
 	genScalData() completed execution.
@@ -808,14 +808,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.704971 sec.
+Time taken for kernel 1 is 17.543994 sec.
 
-Time taken for all is 32.439232 sec.
+Time taken for all is 32.294396 sec.
 
 end_of_execution
-20 - ssca2 - seq
-0m0,131s 0m0,115s
-290m5,502s 210m7,103s
+20 - ssca2 - rtm_intel
+0m0,101s 0m0,131s
+290m1,327s 210m37,480s
 
 
 
@@ -840,7 +840,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.719266 sec.
+Time taken for Scalable Data Generation is 14.765126 sec.
 
 
 	genScalData() completed execution.
@@ -849,14 +849,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.577557 sec.
+Time taken for kernel 1 is 17.158472 sec.
 
-Time taken for all is 32.296823 sec.
+Time taken for all is 31.923598 sec.
 
 end_of_execution
-21 - ssca2 - seq
-0m0,136s 0m0,121s
-305m3,293s 220m43,768s
+21 - ssca2 - rtm_intel
+0m0,106s 0m0,138s
+303m57,051s 220m52,577s
 
 
 
@@ -881,7 +881,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.735307 sec.
+Time taken for Scalable Data Generation is 14.782374 sec.
 
 
 	genScalData() completed execution.
@@ -890,14 +890,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.533032 sec.
+Time taken for kernel 1 is 17.994776 sec.
 
-Time taken for all is 32.268339 sec.
+Time taken for all is 32.777150 sec.
 
 end_of_execution
-22 - ssca2 - seq
-0m0,139s 0m0,129s
-319m24,651s 231m12,143s
+22 - ssca2 - rtm_intel
+0m0,113s 0m0,142s
+319m38,409s 231m52,120s
 
 
 
@@ -922,7 +922,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.702217 sec.
+Time taken for Scalable Data Generation is 14.791716 sec.
 
 
 	genScalData() completed execution.
@@ -931,14 +931,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.650663 sec.
+Time taken for kernel 1 is 17.557201 sec.
 
-Time taken for all is 32.352880 sec.
+Time taken for all is 32.348917 sec.
 
 end_of_execution
-23 - ssca2 - seq
-0m0,144s 0m0,133s
-334m24,494s 241m52,074s
+23 - ssca2 - rtm_intel
+0m0,118s 0m0,149s
+334m2,567s 242m17,379s
 
 
 
@@ -963,7 +963,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 15.067183 sec.
+Time taken for Scalable Data Generation is 14.788993 sec.
 
 
 	genScalData() completed execution.
@@ -972,14 +972,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.784525 sec.
+Time taken for kernel 1 is 17.319475 sec.
 
-Time taken for all is 32.851708 sec.
+Time taken for all is 32.108468 sec.
 
 end_of_execution
-24 - ssca2 - seq
-0m0,148s 0m0,140s
-349m26,425s 252m40,278s
+24 - ssca2 - rtm_intel
+0m0,124s 0m0,153s
+349m37,866s 253m2,036s
 
 
 
@@ -1004,7 +1004,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.724406 sec.
+Time taken for Scalable Data Generation is 14.776933 sec.
 
 
 	genScalData() completed execution.
@@ -1013,14 +1013,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.579948 sec.
+Time taken for kernel 1 is 17.454049 sec.
 
-Time taken for all is 32.304354 sec.
+Time taken for all is 32.230982 sec.
 
 end_of_execution
-25 - ssca2 - seq
-0m0,154s 0m0,146s
-365m10,833s 263m29,085s
+25 - ssca2 - rtm_intel
+0m0,134s 0m0,154s
+364m52,891s 263m43,646s
 
 
 
@@ -1045,7 +1045,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.690780 sec.
+Time taken for Scalable Data Generation is 14.776269 sec.
 
 
 	genScalData() completed execution.
@@ -1054,14 +1054,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.475232 sec.
+Time taken for kernel 1 is 17.628187 sec.
 
-Time taken for all is 32.166012 sec.
+Time taken for all is 32.404456 sec.
 
 end_of_execution
-26 - ssca2 - seq
-0m0,163s 0m0,148s
-379m53,870s 274m5,715s
+26 - ssca2 - rtm_intel
+0m0,142s 0m0,157s
+379m20,316s 274m14,007s
 
 
 
@@ -1086,7 +1086,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.743552 sec.
+Time taken for Scalable Data Generation is 14.681135 sec.
 
 
 	genScalData() completed execution.
@@ -1095,14 +1095,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.585426 sec.
+Time taken for kernel 1 is 17.667040 sec.
 
-Time taken for all is 32.328978 sec.
+Time taken for all is 32.348175 sec.
 
 end_of_execution
-27 - ssca2 - seq
-0m0,170s 0m0,151s
-395m17,195s 284m49,517s
+27 - ssca2 - rtm_intel
+0m0,149s 0m0,160s
+395m42,541s 285m16,178s
 
 
 
@@ -1127,7 +1127,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.721572 sec.
+Time taken for Scalable Data Generation is 15.028064 sec.
 
 
 	genScalData() completed execution.
@@ -1136,14 +1136,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.429997 sec.
+Time taken for kernel 1 is 17.767606 sec.
 
-Time taken for all is 32.151569 sec.
+Time taken for all is 32.795670 sec.
 
 end_of_execution
-28 - ssca2 - seq
-0m0,177s 0m0,155s
-409m42,228s 295m15,350s
+28 - ssca2 - rtm_intel
+0m0,155s 0m0,165s
+410m11,655s 295m51,044s
 
 
 
@@ -1168,7 +1168,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.674269 sec.
+Time taken for Scalable Data Generation is 14.751168 sec.
 
 
 	genScalData() completed execution.
@@ -1177,14 +1177,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.215238 sec.
+Time taken for kernel 1 is 17.793077 sec.
 
-Time taken for all is 31.889507 sec.
+Time taken for all is 32.544245 sec.
 
 end_of_execution
-29 - ssca2 - seq
-0m0,180s 0m0,163s
-423m39,957s 305m31,279s
+29 - ssca2 - rtm_intel
+0m0,164s 0m0,167s
+425m17,881s 306m35,087s
 
 
 
@@ -1209,7 +1209,7 @@ No. of intra-clique edges - 22043427
 No. of inter-clique edges - 890631
 Total no. of edges        - 22934058
 
-Time taken for Scalable Data Generation is 14.756739 sec.
+Time taken for Scalable Data Generation is 14.798090 sec.
 
 
 	genScalData() completed execution.
@@ -1218,70 +1218,14 @@ Kernel 1 - computeGraph() beginning execution...
 
 	computeGraph() completed execution.
 
-Time taken for kernel 1 is 17.777805 sec.
+Time taken for kernel 1 is 17.488556 sec.
 
-Time taken for all is 32.534544 sec.
-
-end_of_execution
-30 - ssca2 - seq
-0m0,184s 0m0,170s
-438m2,894s 316m2,615s
-
-
+Time taken for all is 32.286646 sec.
 
 end_of_execution
-1 - ssca2 - seq
-0m0,187s 0m0,178s
-444m20,549s 317m5,744s
-
-
-
-end_of_execution
-2 - ssca2 - seq
-0m0,190s 0m0,183s
-448m31,834s 317m7,153s
-
-
-
-end_of_execution
-3 - ssca2 - seq
-0m0,195s 0m0,186s
-452m42,861s 317m8,488s
-
-
-
-end_of_execution
-4 - ssca2 - seq
-0m0,198s 0m0,191s
-456m52,835s 317m10,448s
-
-
-
-end_of_execution
-5 - ssca2 - seq
-0m0,204s 0m0,193s
-461m2,512s 317m11,884s
-
-
-
-end_of_execution
-6 - ssca2 - seq
-0m0,211s 0m0,193s
-465m10,637s 317m13,314s
-
-
-
-end_of_execution
-7 - ssca2 - seq
-0m0,212s 0m0,202s
-469m18,303s 317m14,802s
-
-
-
-end_of_execution
-8 - ssca2 - seq
-0m0,216s 0m0,205s
-473m27,420s 317m16,252s
+30 - ssca2 - rtm_intel
+0m0,166s 0m0,176s
+439m40,770s 317m2,731s
 
 
 
